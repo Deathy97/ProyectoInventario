@@ -1,0 +1,61 @@
+Buscar las plantillas responsive
+
+Recuperar fichero de texto
+
+Analizar estructura, modelo relacional
+
+Crear proyecto:
+
+
+https://html5up.net/
+https://www.freshdesignweb.com/free-html5-css3-templates/
+
+__________________________________________________________________________________________________
+
+Estructura de los datos del proyecto:
+Limitar la entrada mediante usuarios usar como base la app que tenemos ya creada y coger la parte de gestion
+
+si algo no se conoce tenemos que dar la opcion a dejar el campo en blanco si es un desplegable
+
+
+	FICHA DE MATERIAL
+_____________________________________________
+
+Referencia (id principal)
+Aparato    (Descripcion)
+Proveedor  (Nombre, en una tabla a parte)
+Tipo 	   (Lista por lo tanto desplegable)
+Marca      (Tiene que estar reflejado el fabricante)
+Modelo	   (Puede quedar en blanco)
+Nº Serie   (Puede quedar en blanco)
+Fecha de Entrada
+Autorizada por (Referencia a parte con las personas que pueden autorizar la entrada de material)
+Garantia   (Por tiempo, maybe tipo texto)
+Ubicacion (lugares en una tabla a parte donde se encuentra dicho objeto, referencia unica del 	   lugar para poder sacar el material de cada aula etc)
+Nº interno (Identificacion dentro del aula, puede quedar en blanco)
+Fecha de baja (No se rellena hasta que no se da de baja)
+Observaciones (Texto libre, longtext)
+
+Entre materiales y proveedores M-P N:1
+
+
+	INCIDENCIAS
+____________________________________________	
+
+Idincidencia (Idincidencia, clave que tendra relacion con los materiales)
+Fecha incidencia
+Descripcion incidencia (Texto libre, longtext)
+Fecha solucion 
+
+
+Cada material puede tener varias incidencias   Relacion M-I  1:N
+
+	
+	REVISIONES
+___________________________________________________
+Idrevision
+Fecha revision
+Realizada por
+Observaciones
+
+Cada material puede tener varias revisiones    M-R  1:N
