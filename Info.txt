@@ -1,0 +1,6 @@
+Dijo Merche que como somos 4 nos pediria el redactar como hemos conseguido importar el archivo ext, dejo el Script que se utilizó, los archivos txt estan en el repo de Javi
+
+https://github.com/MocoNinja/Python2Rescue/tree/pruebaNueva
+
+Tambien dejo la base de datos en Acces que la consulta en la que estan los datos se llama registros y en un ratete intentare tener ya el sql 
+rdy para importarlo a MySQL
