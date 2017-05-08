@@ -36,7 +36,7 @@ include("conexion.php");
 		<td>Fecha Solucion</td>
 		<td>
 			<input type="date" name="FechaSolucion" id="FechaSolucion" placeholder="FechaSolucion">
-		</td>
+		</td> 
 	</tr>
 	<tr>
 		<td>Solucion</td>
