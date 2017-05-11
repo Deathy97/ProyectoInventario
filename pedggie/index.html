@@ -8,16 +8,12 @@ Licence URI: http://www.os-templates.com/template-terms
 -->
 <html>
 <head>
-<title>home</title>
+<title>Pedggie</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
-<?php
-session_start();
-include("conexion.php");
-?>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -27,7 +23,7 @@ include("conexion.php");
     <div class="fl_left">
       <ul class="nospace inline pushright">
         <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-envelope-o"></i> jorgepimpinela8@gmail.com</li>
+        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
       </ul>
     </div>
     <div class="fl_right">
@@ -50,17 +46,15 @@ include("conexion.php");
 <div class="wrapper row1">
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    
-    <div id="logo" style="position: absolute; width: 30%; margin: -20px;">
-
-      <h1><img src="imagenes/logo.png" style="width: 100px; margin-right: 40px;"><a href="home.php">Inventario</a></h1>
+    <div id="logo" class="fl_left">
+      <h1><a href="index.html">Pedggie</a></h1>
     </div>
     <div id="quickinfo" class="fl_right">
       <ul class="nospace inline">
-        <?php echo "<li><strong>Usuario: $_SESSION[nombreusuario]</strong></li><br>
-        <li><strong>Dni: $_SESSION[dniusuario]</strong></li>"?>
-        <li><a href="logout.php"><strong>Salir</strong></a></li>
-
+        <li><strong>Faucibus:</strong><br>
+          +00 (123) 456 7890</li>
+        <li><strong>Vehicula:</strong><br>
+          +00 (123) 456 7890</li>
       </ul>
     </div>
     <!-- ################################################################################################ -->
@@ -73,55 +67,33 @@ include("conexion.php");
   <nav id="mainav" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <ul class="clear">
-      <li class="active"><a href="home.php">Home</a></li>
-      
-      <li><a class="drop" href="#">INCIDENCIAS</a>
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a class="drop" href="#">Pages</a>
         <ul>
-            <li><a href="verincidencias.php">VER</a></li>
-            <li><a href="formIncidencias.php">NUEVA</a></li>
+          <li><a href="pages/gallery.html">Gallery</a></li>
+          <li><a href="pages/full-width.html">Full Width</a></li>
+          <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
+          <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
+          <li><a href="pages/basic-grid.html">Basic Grid</a></li>
         </ul>
       </li>
-      <li><a class="drop" href="">REVISIONES</a>
+      <li><a class="drop" href="#">Dropdown</a>
         <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVA</a></li>
+          <li><a href="#">Level 2</a></li>
+          <li><a class="drop" href="#">Level 2 + Drop</a>
+            <ul>
+              <li><a href="#">Level 3</a></li>
+              <li><a href="#">Level 3</a></li>
+              <li><a href="#">Level 3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Level 2</a></li>
         </ul>
       </li>
-      <li><a class="drop" href="#">MATERIALES</a>
-        <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVO</a></li>
-        </ul>
-      </li>
-      <li><a class="drop" href="">MARCAS</a>
-        <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVA</a></li>
-        </ul>
-      </li>
-      <li><a class="drop" href="#">PROVEEDORES</a>
-        <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVO</a></li>
-        </ul>
-      </li>
-      <li><a class="drop" href="">SOFTWARE</a>
-        <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVO</a></li>
-        </ul>
-      </li>
-      <li><a class="drop" href="#">UBICACIONES</a>
-        <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVA</a></li>
-        </ul>
-      </li>
-      <li><a class="drop" href="">USUARIOS</a>
-        <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVO</a></li>
-        </ul>
+      <li><a href="#">Link Text</a></li>
+      <li><a href="#">Link Text</a></li>
+      <li><a href="#">Link Text</a></li>
+      <li><a href="#">Long Link Text</a></li>
     </ul>
     <!-- ################################################################################################ -->
   </nav>
@@ -129,12 +101,12 @@ include("conexion.php");
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('imagenes/binario.jpg');">
+<div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/01.png');">
   <div id="pageintro" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <article class="introtxt">
-      <h2 class="heading">Inventario Salesianos Zaragoza</h2>
-      <p>aqui la informacion del proyecto y como funciona.</p>
+      <h2 class="heading">Maecenas facilisis</h2>
+      <p>Viverra pulvinar etiam dictum porta nisi ornare gravida vestibulum</p>
       <footer>
         <ul class="nospace inline pushright">
           <li><a class="btn" href="#">Iaculis diam</a></li>

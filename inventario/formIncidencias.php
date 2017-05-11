@@ -7,11 +7,11 @@
 <?php
 include("conexion.php");
 ?>
-<form name="alumnos" id="alumnos" method="post" action="insalumnos.php">
-<table align="center" width="50%" border="2px solid" style="background-color: aqua">
+<form name="incidencias" id="incidencias" method="post" action="insincidencias.php">
+<table align="center" width="50%" border="1px solid" style="background-color: aqua; border-radius: 5px;">
 	<tr>
-		<td colspan="2" align="center">
-			<img src="imagenes/logosz.jpg" width="500px" align="center">
+		<td colspan="2" style="text-align: center">
+			<h3>CREAR INCIDENCIA</h3>
 		</td>
 	</tr>
 	<tr>
@@ -36,13 +36,24 @@ include("conexion.php");
 		<td>Fecha Solucion</td>
 		<td>
 			<input type="date" name="FechaSolucion" id="FechaSolucion" placeholder="FechaSolucion">
-		</td> 
+		</td>
 	</tr>
 	<tr>
 		<td>Solucion</td>
 		<td>
 			<input type="text" name="Solucion" id="Solucion" placeholder="Solucion">
 		</td>
+	</tr>
+	<tr>
+		<td colspan="2" style="text-align: center">
+			<h3><input type="submit" name="Enviar" id="Enviar" placeholder="Enviar"></h3>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="7" align="center" style="background-color: aqua;"><a href="verincidencias.php">Ver incidencias</a></td>
+	</tr>
+	<tr>
+		<td colspan="7" align="center" style="background-color: aqua;"><a href="home.php">home</a></td>
 	</tr>
 </table>
 </form>
