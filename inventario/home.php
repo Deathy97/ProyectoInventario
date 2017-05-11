@@ -14,6 +14,10 @@ Licence URI: http://www.os-templates.com/template-terms
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
+<?php
+session_start();
+include("conexion.php");
+?>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -49,15 +53,13 @@ Licence URI: http://www.os-templates.com/template-terms
     
     <div id="logo" style="position: absolute; width: 30%; margin: -20px;">
 
-      <h1><img src="imagenes/logo.png" style="width: 100px; margin-right: 40px;"><a href="home.html">Inventario</a></h1>
+      <h1><img src="imagenes/logo.png" style="width: 100px; margin-right: 40px;"><a href="home.php">Inventario</a></h1>
     </div>
     <div id="quickinfo" class="fl_right">
       <ul class="nospace inline">
-        <li><strong>Nombre:</strong><br>
-          poner el nombre con php</li>
-        <li><strong>Dni</strong><br>
-          poner el dni con php</li>
-        <li><a href="index.php"><strong>Salir</strong></a></li>
+        <?php echo "<li><strong>Usuario: $_SESSION[nombreusuario]</strong></li><br>
+        <li><strong>Dni: $_SESSION[dniusuario]</strong></li>"?>
+        <li><a href="logout.php"><strong>Salir</strong></a></li>
 
       </ul>
     </div>
@@ -72,9 +74,10 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <ul class="clear">
       <li class="active"><a href="home.php">Home</a></li>
+      
       <li><a class="drop" href="#">INCIDENCIAS</a>
         <ul>
-            <li><a href="#">VER</a></li>
+            <li><a href="verincidencias.php">VER</a></li>
             <li><a href="formIncidencias.php">NUEVA</a></li>
         </ul>
       </li>
@@ -87,7 +90,7 @@ Licence URI: http://www.os-templates.com/template-terms
       <li><a class="drop" href="#">MATERIALES</a>
         <ul>
             <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVA</a></li>
+            <li><a href="#">NUEVO</a></li>
         </ul>
       </li>
       <li><a class="drop" href="">MARCAS</a>
@@ -99,13 +102,13 @@ Licence URI: http://www.os-templates.com/template-terms
       <li><a class="drop" href="#">PROVEEDORES</a>
         <ul>
             <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVA</a></li>
+            <li><a href="#">NUEVO</a></li>
         </ul>
       </li>
       <li><a class="drop" href="">SOFTWARE</a>
         <ul>
             <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVA</a></li>
+            <li><a href="#">NUEVO</a></li>
         </ul>
       </li>
       <li><a class="drop" href="#">UBICACIONES</a>
@@ -117,7 +120,7 @@ Licence URI: http://www.os-templates.com/template-terms
       <li><a class="drop" href="">USUARIOS</a>
         <ul>
             <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVA</a></li>
+            <li><a href="#">NUEVO</a></li>
         </ul>
     </ul>
     <!-- ################################################################################################ -->
