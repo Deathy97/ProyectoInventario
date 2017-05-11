@@ -77,8 +77,8 @@ include("conexion.php");
       
       <li><a class="drop" href="#">INCIDENCIAS</a>
         <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="formIncidencias.php">NUEVA</a></li>
+            <li><a href="incidencias/verincidencias.php">VER</a></li>
+            <li><a href="incidencias/formIncidencias.php">NUEVA</a></li>
         </ul>
       </li>
       <li><a class="drop" href="">REVISIONES</a>
@@ -119,8 +119,8 @@ include("conexion.php");
       </li>
       <li><a class="drop" href="">USUARIOS</a>
         <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVO</a></li>
+            <li><a href="usuarios/verusuarios.php">VER</a></li>
+            <li><a href="usuarios/formusuarios.php">NUEVO</a></li>
         </ul>
     </ul>
     <!-- ################################################################################################ -->
