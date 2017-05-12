@@ -26,8 +26,8 @@ include("conexion.php");
     <!-- ################################################################################################ -->
     <div class="fl_left">
       <ul class="nospace inline pushright">
-        <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-envelope-o"></i> jorgepimpinela8@gmail.com</li>
+        <li><i class="fa fa-phone"></i> 976 30 68 78</li>
+        <li><i class="fa fa-envelope-o"></i> secretaria.zaragoza@salesianos.edu</li>
       </ul>
     </div>
     <div class="fl_right">
@@ -51,16 +51,18 @@ include("conexion.php");
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
     
-    <div id="logo" style="position: absolute; width: 30%; margin: -20px;">
-
-      <h1><img src="imagenes/logo.png" style="width: 100px; margin-right: 40px;"><a href="home.php">Inventario</a></h1>
+    <div id="logo" style="position:absolute; taxt-align:centre; width: 60%; margin: -20px;">
+      <img src="imagenes/logo1.png" style="width: 150px; margin-right: 40px;">
     </div>
-    <div id="quickinfo" class="fl_right">
+    <div id="titulo" style="margin-left: 40%;">
+     <h1 style="font-size:300%;"><a href="home.php">Inventario</a></h5>
+    </div>
+
+    <div id="quickinfo" class="fl_right" style="float:right; text-align:right">
       <ul class="nospace inline">
         <?php echo "<li><strong>Usuario: $_SESSION[nombreusuario]</strong></li><br>
         <li><strong>Dni: $_SESSION[dniusuario]</strong></li>"?>
         <li><a href="logout.php"><strong>Salir</strong></a></li>
-
       </ul>
     </div>
     <!-- ################################################################################################ -->
@@ -145,41 +147,22 @@ include("conexion.php");
 </div>
 <!-- ################################################################################################ -->
 <div class="wrapper row4">
-  <footer id="footer" class="hoc clear"> 
+   <footer id="footer" class="hoc clear" > 
     <!-- ################################################################################################ -->
-    <div class="one_third first">
+    <div  >
       <h6 class="title">Contacto</h6>
-      <ul class="nospace linklist contact">
+      <ul class="nospace linklist contact" >
         <li><i class="fa fa-map-marker"></i>
           <address>
           Calle María Auxiliadora, 57, 50009 Zaragoza
           </address>
         </li>
-        <li><i class="fa fa-phone"></i> 976 30 68 78</li>
+        <li><i class="fa fa-phone"></i> 976 30 68 78<br></li>
         <li><i class="fa fa-envelope-o"></i> secretaria.zaragoza@salesianos.edu</li>
       </ul>
     </div>
-    <div class="one_third">
-      <h6 class="title">PÁGINAS POPULARES</h6>
-      <ul class="nospace linklist">
-        <li><a href="vermateriales.php">Materiales</a></li>
-        <li><a href="verRevisiones.php">Revisiones</a></li>
-        <li><a href="verincidencias.php">Incidencias</a></li>
-        <li><a href="verusuarios.php">Usuarios</a></li>
-      </ul>
-    </div>
-    <div class="one_third">
-      <h6 class="title">Suscríbete</h6>
-      <p class="btmspace-30">Se informará de cambios en la base de datos.</p>
-      <form method="post" action="#">
-        <fieldset>
-          <legend>Newsletter:</legend>
-          <input class="btmspace-15" type="text" value="" placeholder="Nombre">
-          <input class="btmspace-15" type="text" value="" placeholder="Email">
-          <button type="submit" value="submit">Suscribir</button>
-        </fieldset>
-      </form>
-    </div>
+    
+    
     <!-- ################################################################################################ -->
   </footer>
 </div>
