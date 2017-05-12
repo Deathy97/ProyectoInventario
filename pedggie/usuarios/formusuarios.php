@@ -7,14 +7,14 @@
 	<body>
 		<?php
 			session_start();
-			include("conexion.php");
+			include("./../conexion.php");
 		?>
 
 		<form name="usuarios" id="usuarios" method="post" action="insusuarios.php">
 			<table align="center" width="50%">
 
 				<tr>
-					<td colspan="6" align="right"><?php echo "Usuario: $_SESSION[nombreusuario]"?>&nbsp; &nbsp;  <a href="home.php">Volver</a>&nbsp; &nbsp;  <a href="logout.php">Salir</a></td>
+					<td colspan="6" align="right"><?php echo "Usuario: $_SESSION[nombreusuario]"?>&nbsp; &nbsp;  <a href="./../home.php">Volver</a>&nbsp; &nbsp;  <a href="logout.php">Salir</a></td>
 				</tr>
 
 				<tr>

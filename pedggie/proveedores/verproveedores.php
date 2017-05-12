@@ -21,7 +21,7 @@
 <!-- aqui falta el dniUsuario que debera rellenarse con el usuario logeado; aun no sabemos hacerlo-->
 	</tr><td></td>
 <?php
-	include("conexion.php");
+	include("./../conexion.php");
 	$sql = "SELECT nif, proveedor FROM proveedores;";
 	$registros=mysqli_query($conexion, $sql);
 	while($linea=mysqli_fetch_array($registros)){
