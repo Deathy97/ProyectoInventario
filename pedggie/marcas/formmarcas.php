@@ -21,20 +21,15 @@ include("./../conexion.php");
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2" style="text-align: center" >
-			<h3><input type="submit" name="Enviar" id="Enviar" value="Añadir" placeholder="Enviar"></h3>
+		<td colspan="7" align="center">
+			<input type="submit" name="Enviar" id="Enviar" placeholder="Enviar">
 		</td>
 	</tr>
 	<tr>
-		<td colspan="7" style="padding:5px ">
-			<a href="vermarcas.php">Ver marcas</a>
+		<td colspan="7" align="right">
+			<a href="vermarcas.php">Ver marcas</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./../home.php">Página principal</a>
 		</td>
-	</tr>
-	<tr>
-		<td colspan="7" align="right" style="padding: 5px;">
-			<a href="home.php">Home</a></p>
-		</td>
-		
 	</tr>
 </table>
 </form>

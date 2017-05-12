@@ -78,52 +78,52 @@ include("conexion.php");
       <li class="active"><a href="home.php">Home</a></li>
       <li><a class="drop" href="#">MATERIALES</a>
         <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVO</a></li>
+            <li><a href="materiales/vermateriales.php">VER</a></li>
+            <li><a href="materiales/formmateriales.php">NUEVO</a></li>
         </ul>
       </li>
       <li><a class="drop" href="#">INCIDENCIAS</a>
         <ul>
-            <li><a href="verincidencias.php">VER</a></li>
-            <li><a href="formincidencias.php">NUEVA</a></li>
+            <li><a href="incidencias/verincidencias.php">VER</a></li>
+            <li><a href="incidencias/formincidencias.php">NUEVA</a></li>
         </ul>
       </li>
       <li><a class="drop" href="">REVISIONES</a>
         <ul>
-            <li><a href="verrevisiones.php">VER</a></li>
-            <li><a href="formrevisiones.php">NUEVA</a></li>
+            <li><a href="revisiones/verrevisiones.php">VER</a></li>
+            <li><a href="revisiones/formrevisiones.php">NUEVA</a></li>
         </ul>
       </li>
       <li><a class="drop" href="">SOFTWARE</a>
         <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVO</a></li>
+            <li><a href="software/versoftware.php">VER</a></li>
+            <li><a href="software/formsoftware.php">NUEVO</a></li>
         </ul>
       </li>
       <li><a class="drop" href="">MÁS</a>
         <ul>
               <li><a class="drop" href="">MARCAS</a>
                 <ul>
-                  <li><a href="#">VER</a></li>
-                  <li><a href="#">NUEVO</a></li>
+                  <li><a href="marcas/vermarcas.php">VER</a></li>
+                  <li><a href="marcas/formmarcas.php">NUEVO</a></li>
                 </ul>
               </li>
               <li><a class="drop" href="">PROVEEDORES</a>
                 <ul>
-                  <li><a href="#">VER</a></li>
-                  <li><a href="#">NUEVO</a></li>
+                  <li><a href="proveedores/verproveedores.php">VER</a></li>
+                  <li><a href="proveedores/formproveedores.php">NUEVO</a></li>
                 </ul>
               </li>
               <li><a class="drop" href="">UBICACIONES</a>
                 <ul>
-                  <li><a href="#">VER</a></li>
-                  <li><a href="#">NUEVO</a></li>
+                  <li><a href="ubicaciones/verubicaciones.php">VER</a></li>
+                  <li><a href="ubicaciones/formubicaciones.php">NUEVO</a></li>
                 </ul>
               </li>
               <li><a class="drop" href="">USUARIOS</a>
               <ul>
-                <li><a href="verusuarios.php">VER</a></li>
-                <li><a href="formusuarios.php">NUEVO</a></li>
+                <li><a href="usuarios/verusuarios.php">VER</a></li>
+                <li><a href="usuarios/formusuarios.php">NUEVO</a></li>
               </ul>
             </li>
         </ul>

@@ -39,10 +39,14 @@ include("./../conexion.php");
 		</td>
 	</tr>
 	<tr>
-		<td style="text-align: center" colspan="2">
-			<input type="submit" name="Enviar" id="Enviar" value="Añadir" placeholder="Enviar">
-			<a href="versoftware.php">Ver softwares</a>
-			<a href="./../home.php">Home</a></p>
+		<td colspan="7" align="center">
+			<input type="submit" name="Enviar" id="Enviar" placeholder="Enviar">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="7" align="right">
+			<a href="versoftware.php">Ver softwares</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./../home.php">Página principal</a>
 		</td>
 	</tr>
 </table>

@@ -5,12 +5,6 @@
 </head>
 <body>
 <table align="center" width="50%" style="background-color: blue; color: white; border-radius: 10px; padding: 10px;">
-	<tr>
-		<td colspan="7" align="center" style="background-color: aqua;"><a href="formsoftware.php">Volver al formulario</a></td>
-	</tr>
-	<tr>
-		<td colspan="7" align="center" style="background-color: aqua;"><a href="./../home.php">home</a></td>
-	</tr>
 	<tr align="center" bgcolor="black">
 		<td >idSoftware</td>
 		<td>Descripción</td>
@@ -29,6 +23,12 @@
 }
 mysqli_close($conexion);
 ?>
+<tr>
+		<td colspan="7" align="right">
+			<a href="formsoftware.php">Ir al formulario</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./../home.php">Página principal</a>
+		</td>
+	</tr>
 </table>
 </body>
 </html>

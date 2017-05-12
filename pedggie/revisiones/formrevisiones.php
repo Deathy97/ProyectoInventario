@@ -11,7 +11,7 @@ include("./../conexion.php");
 <table align="center" width="50%" border="1px solid">
 	<tr>
 		<td colspan="2" style="text-align: center">
-			<h3>INSERTAR REVISIONES</h3>
+			<h3>CREAR INCIDENCIA</h3>
 		</td>
 	</tr>
 	<tr>
@@ -63,10 +63,14 @@ include("./../conexion.php");
 		</td>
 	</tr>
 	<tr>
-		<td style="text-align: center" colspan="2">
-			<input type="submit" name="Enviar" id="Enviar" value="Añadir" placeholder="Enviar">
-			<a href="verrevisiones.php">Ver revisiones</a>
-			<a href="./../home.php">Home</a></p>
+		<td colspan="7" align="center">
+			<input type="submit" name="Enviar" id="Enviar" placeholder="Enviar">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="7" align="right">
+			<a href="verrevisiones.php">Ver revisiones</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./../home.php">Página principal</a>
 		</td>
 	</tr>
 </table>

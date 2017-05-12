@@ -5,17 +5,6 @@
 </head>
 <body>
 <table align="center" width="50%" style="background-color: blue; color: white; border-radius: 10px; padding: 10px;">
-	<tr>
-		<td colspan="7" align="center">
-			<img src="imagenes/logosz.jpg" width="500px" align="center">
-		</td>
-	</tr>
-	<tr>
-		<td colspan="7" align="center" style="background-color: aqua;"><a href="formincidencias.php">Volver al formulario</a></td>
-	</tr>
-	<tr>
-		<td colspan="7" align="center" style="background-color: aqua;"><a href="./../home.php">home</a></td>
-	</tr>
 	<tr align="center" bgcolor="black">
 		<td >idIncidencia</td>
 		<td>Aparato</td>
@@ -39,6 +28,12 @@ while($linea=mysqli_fetch_array($registros)){
 }
 mysqli_close($conexion);
 ?>
+	<tr>
+		<td colspan="7" align="right" style="background-color: aqua;">
+			<a href="formincidencias.php">Ir al formulario</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./../home.php">Página principal</a>
+		</td>
+	</tr>
 </table>
 </body>
 </html>
