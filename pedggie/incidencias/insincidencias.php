@@ -6,7 +6,7 @@ $inc=$_POST['Incidencia'];
 $fSo=$_POST['FechaSolucion'];
 $sol=$_POST['Solucion'];
 // conectamos con la BD
-include("conexion.php");
+include("./../conexion.php");
 // creamos consulta
 $sql="INSERT INTO incidencias(idMaterial, FechaIncidencia, Incidencia, FechaSolucion, Solucion) VALUES ('$num', '$fIn', '$inc', '$fSo', '$sol')";
 // ejecutamosla consulta

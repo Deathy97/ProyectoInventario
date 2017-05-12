@@ -1,5 +1,5 @@
 <?php
-include("conexion.php");
+include("./../conexion.php");
 
 $cla=$_GET['clave'];
 $sql="DELETE from usuarios where dni='$cla'";

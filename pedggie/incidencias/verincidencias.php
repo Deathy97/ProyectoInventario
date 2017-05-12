@@ -14,7 +14,7 @@
 		<td colspan="7" align="center" style="background-color: aqua;"><a href="formincidencias.php">Volver al formulario</a></td>
 	</tr>
 	<tr>
-		<td colspan="7" align="center" style="background-color: aqua;"><a href="home.php">home</a></td>
+		<td colspan="7" align="center" style="background-color: aqua;"><a href="./../home.php">home</a></td>
 	</tr>
 	<tr align="center" bgcolor="black">
 		<td >idIncidencia</td>
@@ -27,7 +27,7 @@
 <!-- aqui falta el dniUsuario que debera rellenarse con el usuario logeado; aun no sabemos hacerlo-->
 	</tr><td></td>
 <?php
-include("conexion.php");
+include("./../conexion.php");
 //creamos ula consulta1
 $sql = "SELECT i.idIncidencia, i.idMaterial, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion, i.idUsuario FROM incidencias as i;";
 //ejecutamos la consulta

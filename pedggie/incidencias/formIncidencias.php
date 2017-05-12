@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php
-include("conexion.php");
+include("./../conexion.php");
 ?>
 <form name="incidencias" id="incidencias" method="post" action="insincidencias.php">
 <table align="center" width="50%" border="1px solid" style="background-color: aqua; border-radius: 5px;">
