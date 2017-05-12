@@ -52,10 +52,10 @@ include("conexion.php");
     <!-- ################################################################################################ -->
     
     <div id="logo" style="position:absolute; taxt-align:centre; width: 60%; margin: -20px;">
-      <img src="imagenes/logo1.png" style="width: 150px; margin-right: 40px;">
+      <a href="../home.php"><img src="../imagenes/logo1.png" style="width: 150px; margin-right: 40px;"></a>
     </div>
     <div id="titulo" style="margin-left: 40%;">
-     <h1 style="font-size:250%;"><a href="home.php">Inventario</a></h5>
+     <a href="../home.php"><h1 style="font-size:250%;">Inventario</h1></a>
     </div>
 
     <div id="quickinfo" class="fl_right" style="float:right; text-align:right">
