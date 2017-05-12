@@ -1,19 +1,15 @@
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>verrevisiones.php</title>
 </head>
 <body>
 <table align="center" width="50%" style="background-color: blue; color: white; border-radius: 10px; padding: 10px;">
 	<tr>
-		<td colspan="7" align="center">
-			<img src="imagenes/logo.png" width="500px" align="center">
-		</td>
-	</tr>
-	<tr>
 		<td colspan="7" align="center" style="background-color: aqua;"><a href="formrevisiones.php">Volver al formulario</a></td>
 	</tr>
 	<tr>
-		<td colspan="7" align="center" style="background-color: aqua;"><a href="home.php">home</a></td>
+		<td colspan="7" align="center" style="background-color: aqua;"><a href="./../home.php">home</a></td>
 	</tr>
 	<tr align="center" bgcolor="black">
 		<td >idRevision</td>
@@ -24,7 +20,7 @@
 		<td>Observaciones</td>
 	</tr>
 <?php
-	include("conexion.php");
+	include("./../conexion.php");
 	$sql = "SELECT r.idRevision, m.Aparato, r.FechaRevision, r.hora, u.Usuario, r.Observaciones FROM revisiones AS r, usuarios as u, materiales as m WHERE r.idMaterial=m.idReferencia AND u.dni=r.idUsuario;";
 	$registros=mysqli_query($conexion, $sql);
 	while($linea=mysqli_fetch_array($registros)){

@@ -6,7 +6,7 @@ $hora=$_POST['hora'];
 $idUsuario=$_POST['idUsuario'];
 $Observaciones=$_POST['Observaciones'];
 // conectamos con la BD
-include("conexion.php");
+include("./../conexion.php");
 // creamos consulta
 $sql="INSERT INTO revisiones(idMaterial, FechaRevision, hora, idUsuario, Observaciones) VALUES ('$idMaterial','$FechaRevision','$hora','$idUsuario','$Observaciones')";
 // ejecutamosla consulta
