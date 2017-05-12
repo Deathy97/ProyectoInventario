@@ -11,12 +11,12 @@ Licence URI: http://www.os-templates.com/template-terms
 <title>home</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
 <?php
 session_start();
-include("conexion.php");
+include("../conexion.php");
 ?>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -52,17 +52,17 @@ include("conexion.php");
     <!-- ################################################################################################ -->
     
     <div id="logo" style="position:absolute; taxt-align:centre; width: 60%; margin: -20px;">
-      <img src="imagenes/logo1.png" style="width: 150px; margin-right: 40px;">
+      <img src="../imagenes/logo1.png" style="width: 150px; margin-right: 40px;">
     </div>
     <div id="titulo" style="margin-left: 40%;">
-     <h1 style="font-size:250%;"><a href="home.php">Inventario</a></h5>
+     <h1 style="font-size:250%;"><a href="../home.php">Inventario</a></h5>
     </div>
 
     <div id="quickinfo" class="fl_right" style="float:right; text-align:right">
       <ul class="nospace inline">
         <?php echo "<li><strong>Usuario: $_SESSION[nombreusuario]</strong></li><br>
         <li><strong>Dni: $_SESSION[dniusuario]</strong></li>"?>
-        <li><a href="logout.php"><strong>Salir</strong></a></li>
+        <li><a href="../logout.php"><strong>Salir</strong></a></li>
       </ul>
     </div>
     <!-- ################################################################################################ -->
@@ -75,55 +75,55 @@ include("conexion.php");
   <nav id="mainav" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <ul class="clear">
-      <li class="active"><a href="home.php">Home</a></li>
+      <li class="active"><a href="../home.php">Home</a></li>
       <li><a class="drop" href="#">MATERIALES</a>
         <ul>
-            <li><a href="materiales/vermateriales.php">VER</a></li>
-            <li><a href="materiales/formmateriales.php">NUEVO</a></li>
+            <li><a href="../materiales/vermateriales.php">VER</a></li>
+            <li><a href="../materiales/formmateriales.php">NUEVO</a></li>
         </ul>
       </li>
       <li><a class="drop" href="#">INCIDENCIAS</a>
         <ul>
-            <li><a href="incidencias/verincidencias.php">VER</a></li>
-            <li><a href="incidencias/formincidencias.php">NUEVA</a></li>
+            <li><a href="../incidencias/verincidencias.php">VER</a></li>
+            <li><a href="../incidencias/formincidencias.php">NUEVA</a></li>
         </ul>
       </li>
       <li><a class="drop" href="">REVISIONES</a>
         <ul>
-            <li><a href="revisiones/verrevisiones.php">VER</a></li>
-            <li><a href="revisiones/formrevisiones.php">NUEVA</a></li>
+            <li><a href="../revisiones/verrevisiones.php">VER</a></li>
+            <li><a href="../revisiones/formrevisiones.php">NUEVA</a></li>
         </ul>
       </li>
       <li><a class="drop" href="">SOFTWARE</a>
         <ul>
-            <li><a href="software/versoftware.php">VER</a></li>
-            <li><a href="software/formsoftware.php">NUEVO</a></li>
+            <li><a href="../software/versoftware.php">VER</a></li>
+            <li><a href="../software/formsoftware.php">NUEVO</a></li>
         </ul>
       </li>
       <li><a class="drop" href="">MÁS</a>
         <ul>
               <li><a class="drop" href="">MARCAS</a>
                 <ul>
-                  <li><a href="marcas/vermarcas.php">VER</a></li>
-                  <li><a href="marcas/formmarcas.php">NUEVO</a></li>
+                  <li><a href="../marcas/vermarcas.php">VER</a></li>
+                  <li><a href="../marcas/formmarcas.php">NUEVO</a></li>
                 </ul>
               </li>
               <li><a class="drop" href="">PROVEEDORES</a>
                 <ul>
-                  <li><a href="proveedores/verproveedores.php">VER</a></li>
-                  <li><a href="proveedores/formproveedores.php">NUEVO</a></li>
+                  <li><a href="../proveedores/verproveedores.php">VER</a></li>
+                  <li><a href="../proveedores/formproveedores.php">NUEVO</a></li>
                 </ul>
               </li>
               <li><a class="drop" href="">UBICACIONES</a>
                 <ul>
-                  <li><a href="ubicaciones/verubicaciones.php">VER</a></li>
-                  <li><a href="ubicaciones/formubicaciones.php">NUEVO</a></li>
+                  <li><a href="../ubicaciones/verubicaciones.php">VER</a></li>
+                  <li><a href="../ubicaciones/formubicaciones.php">NUEVO</a></li>
                 </ul>
               </li>
               <li><a class="drop" href="">USUARIOS</a>
               <ul>
-                <li><a href="usuarios/verusuarios.php">VER</a></li>
-                <li><a href="usuarios/formusuarios.php">NUEVO</a></li>
+                <li><a href="../usuarios/verusuarios.php">VER</a></li>
+                <li><a href="../usuarios/formusuarios.php">NUEVO</a></li>
               </ul>
             </li>
         </ul>
@@ -135,16 +135,78 @@ include("conexion.php");
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div class="wrapper bgded overlay" style="background-image:url('imagenes/binario.jpg');">
-  <div id="pageintro" class="hoc clear"> 
+<div class="wrapper row3">
+  <div id="breadcrumb" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    <article class="introtxt">
-      <h2 class="heading">Inventario Salesianos Zaragoza</h2>
-      <p>Bienvenidos a la base de datos del Colegio Salesianos de Zaragoza. Aquí se puede encontrar un registro de los materiales, revisiones, incidencias y demás apartados que son implicados en el colegio..</p>
-      </article>
+    <ul>
+      <li><a href="../home.php">Home</a></li>
+      <li><a href="#">Ver</a></li>
+    
+    </ul>
     <!-- ################################################################################################ -->
   </div>
 </div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      
+
+      <div class="scrollable">
+
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+              <th>Header 3</th>
+              <th>Header 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="#">Value 1</a></td>
+              <td>Value 2</td>
+              <td>Value 3</td>
+              <td>Value 4</td>
+            </tr>
+            <tr>
+              <td>Value 5</td>
+              <td>Value 6</td>
+              <td>Value 7</td>
+              <td><a href="#">Value 8</a></td>
+            </tr>
+            <tr>
+              <td>Value 9</td>
+              <td>Value 10</td>
+              <td>Value 11</td>
+              <td>Value 12</td>
+            </tr>
+            <tr>
+              <td>Value 13</td>
+              <td><a href="#">Value 14</a></td>
+              <td>Value 15</td>
+              <td>Value 16</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+        
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row4">
    <footer id="footer" class="hoc clear" > 
