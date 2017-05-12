@@ -7,7 +7,7 @@
 	$pue=$_POST['puesto'];  //nombres de input o select del formulario
 
 	//conectamos con la base de datos
-	include("conexion.php");
+	include("./../conexion.php");
 
 	//creamos consulta
 	$sql="INSERT INTO usuarios(Dni,Clave,Usuario,Apellidos,idPuesto) values('$dni','$cla','$nom','$ape','$pue')";

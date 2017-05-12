@@ -8,7 +8,7 @@
 	<body>
 		<table align="center" width="80%">
 			<tr>
-				<td align="left"><a href="home.php">Volver</a></td>
+				<td align="left"><a href="./../home.php">Volver</a></td>
 				<br>
 			</tr>
 
@@ -17,7 +17,7 @@
 			</tr>
 
 			<?php
-				include("conexion.php");
+				include("./../conexion.php");
 				//creamos la consulta
 				$sql="SELECT u.Dni,u.Clave,u.Usuario,u.Apellidos,p.Puesto
 					FROM usuarios as u, puestos as p

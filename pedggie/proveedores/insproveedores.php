@@ -3,7 +3,7 @@
 $nif=$_POST['nif'];
 $prov=$_POST['prov'];
 // conectamos con la BD
-include("conexion.php");
+include("./../conexion.php");
 // creamos consulta
 $sql="INSERT INTO proveedores(Nif, Proveedor) VALUES ('$nif','$prov')";
 // ejecutamosla consulta

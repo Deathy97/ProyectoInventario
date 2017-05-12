@@ -4,7 +4,7 @@
 </head>
 <body>
 <?php
-include("conexion.php");
+include("./../conexion.php");
 ?>
 <form name="incidencias" id="incidencias" method="post" action="insproveedores.php">
 <table align="center" width="50%" border="1px solid">
@@ -22,7 +22,7 @@ include("conexion.php");
 	<tr>
 		<td>Proveedor</td>
 		<td>
-			<input type="date" name="prov" id="prov" placeholder="Nombre del proveedor">
+			<input type="text" name="prov" id="prov" placeholder="Nombre del proveedor">
 		</td>
 	</tr>
 	<tr>
@@ -37,7 +37,7 @@ include("conexion.php");
 	</tr>
 	<tr>
 		<td colspan="7" align="right" style="padding: 5px;">
-			<a href="home.php">Home</a></p>
+			<a href="./../home.php">Home</a></p>
 		</td>
 		
 	</tr>
