@@ -14,6 +14,9 @@ Licence URI: http://www.os-templates.com/template-terms
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
+  <?php
+    include("conexion.php");
+  ?>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -22,8 +25,8 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
     <div class="fl_left">
       <ul class="nospace inline pushright">
-        <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-envelope-o"></i> jorgepimpinela8@gmail.com</li>
+        <li><i class="fa fa-phone"></i> 976 30 68 78</li>
+        <li><i class="fa fa-envelope-o"></i> secretaria.zaragoza@salesianos.edu</li>
       </ul>
     </div>
     <div class="fl_right">
@@ -46,15 +49,13 @@ Licence URI: http://www.os-templates.com/template-terms
 <div class="wrapper row1">
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    <div id="logo" style=" width: 30%;">
-      <h1><img src="imagenes/logo.png" style="width: 100px; margin-right: 40px;"><a href="index.php">Inventario</a></h1>
+   <div id="logo" style="position:absolute; taxt-align:centre; width: 60%; margin: -20px;">
+      <img src="imagenes/logo1.png" style="width: 150px; margin-right: 40px;">
     </div>
-    <div id="quickinfo" class="fl_right">
-      <?php
-include("conexion.php");
-?>
-
+    <div id="titulo" style="margin-left: 40%;">
+     <h1 style="font-size:300%;"><a href="home.php">Inventario</a></h5>
     </div>
+    
     <!-- ################################################################################################ -->
   </header>
 </div>
@@ -107,17 +108,15 @@ include("conexion.php");
   <footer id="footer" class="hoc clear" > 
     <!-- ################################################################################################ -->
     <div  >
-      <h6 class="title">Ultricies turpis libero</h6>
+      <h6 class="title">Contacto</h6>
       <ul class="nospace linklist contact" >
         <li><i class="fa fa-map-marker"></i>
           <address>
-          Street Name &amp; Number, Town, Postcode/Zip
+          Calle María Auxiliadora, 57, 50009 Zaragoza
           </address>
         </li>
-        <li><i class="fa fa-phone"></i> +00 (123) 456 7890<br>
-          +00 (123) 456 7890</li>
-        <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+        <li><i class="fa fa-phone"></i> 976 30 68 78<br></li>
+        <li><i class="fa fa-envelope-o"></i> secretaria.zaragoza@salesianos.edu</li>
       </ul>
     </div>
     
