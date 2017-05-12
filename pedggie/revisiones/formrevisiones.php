@@ -59,7 +59,7 @@ include("./../conexion.php");
 	<tr>
 		<td>Observaciones: </td>
 		<td>
-			<textarea name="Observaciones" id="Observaciones" placeholder="Añada sus observaciones." cols="40" rows="4">Escribe un comentario...</textarea>
+			<textarea name="Observaciones" id="Observaciones" placeholder="Añada sus observaciones." cols="40" rows="4"></textarea>
 		</td>
 	</tr>
 	<tr>
