@@ -34,7 +34,7 @@ include("conexion.php");
       <ul class="faico clear">
         <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
         <li><a class="faicon-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
-        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-twitter" href="https://twitter.com/salesianosZAR?lang=es"><i class="fa fa-twitter"></i></a></li>
         <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
         <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
         <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -74,35 +74,22 @@ include("conexion.php");
     <!-- ################################################################################################ -->
     <ul class="clear">
       <li class="active"><a href="home.php">Home</a></li>
-      
-      <li><a class="drop" href="#">INCIDENCIAS</a>
-        <ul>
-            <li><a href="incidencias/verincidencias.php">VER</a></li>
-            <li><a href="incidencias/formIncidencias.php">NUEVA</a></li>
-        </ul>
-      </li>
-      <li><a class="drop" href="">REVISIONES</a>
-        <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVA</a></li>
-        </ul>
-      </li>
       <li><a class="drop" href="#">MATERIALES</a>
         <ul>
             <li><a href="#">VER</a></li>
             <li><a href="#">NUEVO</a></li>
         </ul>
       </li>
-      <li><a class="drop" href="">MARCAS</a>
+      <li><a class="drop" href="#">INCIDENCIAS</a>
         <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVA</a></li>
+            <li><a href="verincidencias.php">VER</a></li>
+            <li><a href="formincidencias.php">NUEVA</a></li>
         </ul>
       </li>
-      <li><a class="drop" href="#">PROVEEDORES</a>
+      <li><a class="drop" href="">REVISIONES</a>
         <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVO</a></li>
+            <li><a href="verrevisiones.php">VER</a></li>
+            <li><a href="formrevisiones.php">NUEVA</a></li>
         </ul>
       </li>
       <li><a class="drop" href="">SOFTWARE</a>
@@ -111,17 +98,34 @@ include("conexion.php");
             <li><a href="#">NUEVO</a></li>
         </ul>
       </li>
-      <li><a class="drop" href="#">UBICACIONES</a>
+      <li><a class="drop" href="">MÁS</a>
         <ul>
-            <li><a href="#">VER</a></li>
-            <li><a href="#">NUEVA</a></li>
+              <li><a class="drop" href="">MARCAS</a>
+                <ul>
+                  <li><a href="#">VER</a></li>
+                  <li><a href="#">NUEVO</a></li>
+                </ul>
+              </li>
+              <li><a class="drop" href="">PROVEEDORES</a>
+                <ul>
+                  <li><a href="#">VER</a></li>
+                  <li><a href="#">NUEVO</a></li>
+                </ul>
+              </li>
+              <li><a class="drop" href="">UBICACIONES</a>
+                <ul>
+                  <li><a href="#">VER</a></li>
+                  <li><a href="#">NUEVO</a></li>
+                </ul>
+              </li>
+              <li><a class="drop" href="">USUARIOS</a>
+              <ul>
+                <li><a href="verusuarios.php">VER</a></li>
+                <li><a href="formusuarios.php">NUEVO</a></li>
+              </ul>
+            </li>
         </ul>
       </li>
-      <li><a class="drop" href="">USUARIOS</a>
-        <ul>
-            <li><a href="usuarios/verusuarios.php">VER</a></li>
-            <li><a href="usuarios/formusuarios.php">NUEVO</a></li>
-        </ul>
     </ul>
     <!-- ################################################################################################ -->
   </nav>
@@ -134,177 +138,45 @@ include("conexion.php");
     <!-- ################################################################################################ -->
     <article class="introtxt">
       <h2 class="heading">Inventario Salesianos Zaragoza</h2>
-      <p>aqui la informacion del proyecto y como funciona.</p>
-      <footer>
-        <ul class="nospace inline pushright">
-          <li><a class="btn" href="#">Iaculis diam</a></li>
-          <li><a class="btn inverse" href="#">Eget maximus</a></li>
-        </ul>
-      </footer>
-    </article>
+      <p>Bienvenidos a la base de datos del Colegio Salesianos de Zaragoza. Aquí se puede encontrar un registro de los materiales, revisiones, incidencias y demás apartados que son implicados en el colegio..</p>
+      </article>
     <!-- ################################################################################################ -->
   </div>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row4">
-  <div class="hoc container clear"> 
-    <!-- ################################################################################################ -->
-    <ul class="nospace elements">
-      <li class="one_third first">
-        <article>
-          <figure><img src="images/demo/320x220.png" alt="">
-            <figcaption><a href="#">View Details &raquo;</a></figcaption>
-          </figure>
-          <div class="txtwrap">
-            <h6 class="heading">Nulla quis fermentum</h6>
-            <p>Justo viverra imperdiet proin ut mollis risus ut cursus auctor orci quis iaculis nisi sollicitudin eget pellentesque rutrum mauris et&hellip;</p>
-          </div>
-        </article>
-      </li>
-      <li class="one_third">
-        <article>
-          <figure><img src="images/demo/320x220.png" alt="">
-            <figcaption><a href="#">View Details &raquo;</a></figcaption>
-          </figure>
-          <div class="txtwrap">
-            <h6 class="heading">Feugiat cras ultrices</h6>
-            <p>Ullamcorper ut vivamus dignissim fringilla metus sed aliquet nunc ut dolor arcu euismod id tincidunt id ullamcorper ac urna&hellip;</p>
-          </div>
-        </article>
-      </li>
-      <li class="one_third">
-        <article>
-          <figure><img src="images/demo/320x220.png" alt="">
-            <figcaption><a href="#">View Details &raquo;</a></figcaption>
-          </figure>
-          <div class="txtwrap">
-            <h6 class="heading">Risus non iaculis</h6>
-            <p>Mauris pellentesque pellentesque quisque velit elit venenatis et sodales ut commodo nec odio in sit amet tempus felis scelerisque&hellip;</p>
-          </div>
-        </article>
-      </li>
-    </ul>
-    <!-- ################################################################################################ -->
-    <div class="clear"></div>
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row3">
-  <main class="hoc container clear"> 
-    <!-- main body -->
-    <!-- ################################################################################################ -->
-    <div class="center btmspace-80">
-      <p class="nospace"><a href="#">Amet consectetur adipiscing</a></p>
-      <h2 class="heading font-x3">Interdum mi at convallis ultrices</h2>
-    </div>
-    <div class="group center">
-      <article class="one_quarter first"><i class="icon fa fa-balance-scale"></i>
-        <h4 class="font-x1 uppercase"><a href="#">Porttitor</a></h4>
-        <p>Arcu vel aliquet enim maximus et etiam euismod ex eget gravida pretium enim ligula commodo.</p>
-      </article>
-      <article class="one_quarter"><i class="icon fa fa-bank"></i>
-        <h4 class="font-x1 uppercase"><a href="#">Elementum</a></h4>
-        <p>Magna nec commodo ipsum libero a risus curabitur volutpat urna ac nisi suscipit vestibulum.</p>
-      </article>
-      <article class="one_quarter"><i class="icon fa fa-plane"></i>
-        <h4 class="font-x1 uppercase"><a href="#">Consectetur</a></h4>
-        <p>Nulla eu massa ornare dictum erat vel tristique ipsum suspendisse potenti in nec finibus ante.</p>
-      </article>
-      <article class="one_quarter"><i class="icon fa fa-graduation-cap"></i>
-        <h4 class="font-x1 uppercase"><a href="#">Ullamcorper</a></h4>
-        <p>Vestibulum gravida magna ex in dictum purus rutrum quis morbi scelerisque tempor tortor et porta.</p>
-      </article>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper row0">
-  <div class="hoc container clear"> 
-    <!-- ################################################################################################ -->
-    <ul class="nospace elements">
-      <li class="one_third first">
-        <article class="center"><a href="#"><img src="images/demo/320x220.png" alt=""></a>
-          <div class="txtwrap">
-            <time class="font-xs block" datetime="2045-04-06">6<sup>th</sup> April 2045</time>
-            <h6 class="heading">Lacus ornare eget</h6>
-            <p>Non purus sodales aliquam lectus sagittis aliquet nisl consequat&hellip;</p>
-            <footer><a href="#">Read More &raquo;</a></footer>
-          </div>
-        </article>
-      </li>
-      <li class="one_third">
-        <article class="center"><a href="#"><img src="images/demo/320x220.png" alt=""></a>
-          <div class="txtwrap">
-            <time class="font-xs block" datetime="2045-04-05">5<sup>th</sup> April 2045</time>
-            <h6 class="heading">Porta felis justo</h6>
-            <p>Est sodales at cras accumsan justo aliquam imperdiet risus lacinia&hellip;</p>
-            <footer><a href="#">Read More &raquo;</a></footer>
-          </div>
-        </article>
-      </li>
-      <li class="one_third">
-        <article class="center"><a href="#"><img src="images/demo/320x220.png" alt=""></a>
-          <div class="txtwrap">
-            <time class="font-xs block" datetime="2045-04-04">4<sup>th</sup> April 2045</time>
-            <h6 class="heading">Justo magna lacinia</h6>
-            <p>Laoreet quam tortor rhoncus mi sed condimentum sit amet molestie&hellip;</p>
-            <footer><a href="#">Read More &raquo;</a></footer>
-          </div>
-        </article>
-      </li>
-    </ul>
-    <!-- ################################################################################################ -->
-    <div class="clear"></div>
-  </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <div class="wrapper row4">
   <footer id="footer" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <div class="one_third first">
-      <h6 class="title">Ultricies turpis libero</h6>
+      <h6 class="title">Contacto</h6>
       <ul class="nospace linklist contact">
         <li><i class="fa fa-map-marker"></i>
           <address>
-          Street Name &amp; Number, Town, Postcode/Zip
+          Calle María Auxiliadora, 57, 50009 Zaragoza
           </address>
         </li>
-        <li><i class="fa fa-phone"></i> +00 (123) 456 7890<br>
-          +00 (123) 456 7890</li>
-        <li><i class="fa fa-fax"></i> +00 (123) 456 7890</li>
-        <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
+        <li><i class="fa fa-phone"></i> 976 30 68 78</li>
+        <li><i class="fa fa-envelope-o"></i> secretaria.zaragoza@salesianos.edu</li>
       </ul>
     </div>
     <div class="one_third">
-      <h6 class="title">Egestas risus sed</h6>
+      <h6 class="title">PÁGINAS POPULARES</h6>
       <ul class="nospace linklist">
-        <li><a href="#">class aptent taciti sociosqu ad litora</a></li>
-        <li><a href="#">per conubia nostra inceptos himenaeos</a></li>
-        <li><a href="#">donec elit metus malesuada quis</a></li>
-        <li><a href="#">molestie convallis cursus eros donec</a></li>
-        <li><a href="#">elit turpis ornare auctor mattis feugiat</a></li>
+        <li><a href="vermateriales.php">Materiales</a></li>
+        <li><a href="verRevisiones.php">Revisiones</a></li>
+        <li><a href="verincidencias.php">Incidencias</a></li>
+        <li><a href="verusuarios.php">Usuarios</a></li>
       </ul>
     </div>
     <div class="one_third">
-      <h6 class="title">Ultricies eros libero</h6>
-      <p class="btmspace-30">Vitae lectus mauris dui ipsum rhoncus vitae semper quis ultrices in nibh.</p>
+      <h6 class="title">Suscríbete</h6>
+      <p class="btmspace-30">Se informará de cambios en la base de datos.</p>
       <form method="post" action="#">
         <fieldset>
           <legend>Newsletter:</legend>
-          <input class="btmspace-15" type="text" value="" placeholder="Name">
+          <input class="btmspace-15" type="text" value="" placeholder="Nombre">
           <input class="btmspace-15" type="text" value="" placeholder="Email">
-          <button type="submit" value="submit">Submit</button>
+          <button type="submit" value="submit">Suscribir</button>
         </fieldset>
       </form>
     </div>
@@ -317,8 +189,7 @@ include("conexion.php");
 <div class="wrapper row5">
   <div id="copyright" class="hoc clear"> 
     <!-- ################################################################################################ -->
-    <p class="fl_left">Copyright &copy; 2015 - All Rights Reserved - <a href="#">Domain Name</a></p>
-    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <p class="fl_left">Copyright &copy; 2017 - Todos los derechos reservados - <a href="#">Salesianos Zaragoza</a></p>
     <!-- ################################################################################################ -->
   </div>
 </div>
