@@ -10,7 +10,7 @@ include("./../conexion.php");
 <table align="center" width="50%" border="1px solid">
 	<tr>
 		<td colspan="2" style="text-align: center">
-			<h3>INSERTAR PROVEEDORES</h3>
+			<h3>CREAR PROVEEDORES</h3>
 		</td>
 	</tr>
 	<tr>
@@ -20,26 +20,21 @@ include("./../conexion.php");
 		</td>
 	</tr>
 	<tr>
-		<td>Proveedor</td>
+		<td>Proveedor: </td>
 		<td>
 			<input type="text" name="prov" id="prov" placeholder="Nombre del proveedor">
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2" style="text-align: center" >
-			<h3><input type="submit" name="Enviar" id="Enviar" value="Añadir" placeholder="Enviar"></h3>
+		<td colspan="7" align="center">
+			<input type="submit" name="Enviar" id="Enviar" placeholder="Enviar">
 		</td>
 	</tr>
 	<tr>
-		<td colspan="7" style="padding:5px ">
-			<a href="verincidencias.php">Ver proveedores</a>
+		<td colspan="7" align="right">
+			<a href="verproveedores.php">Ver proveedores</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="./../home.php">Página principal</a>
 		</td>
-	</tr>
-	<tr>
-		<td colspan="7" align="right" style="padding: 5px;">
-			<a href="./../home.php">Home</a></p>
-		</td>
-		
 	</tr>
 </table>
 </form>
