@@ -27,12 +27,7 @@
 	         				<option value="Otro">Otro</option>
         	 	   		</select>
           			</td> 
-          		</tr>
-          		<!--<tr>
-					<td colspan="7" align="center">
-						<input type="submit" name="Enviar" id="Enviar" placeholder="Enviar">
-					</td>
-				</tr>-->			
+          		</tr>		
 			</table>
 		</form>
 	</body>
