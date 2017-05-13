@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-05-2017 a las 18:50:04
+-- Tiempo de generación: 13-05-2017 a las 19:21:20
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 5.6.30
 
@@ -68,7 +68,6 @@ CREATE TABLE `marcas` (
 CREATE TABLE `materiales` (
   `idReferencia` int(11) NOT NULL,
   `Aparato` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `idCategoria` int(11) NOT NULL,
   `NifProveedor` varchar(9) COLLATE utf8_unicode_ci NOT NULL,
   `idMarca` int(11) NOT NULL,
   `Modelo` int(11) NOT NULL,
@@ -192,8 +191,7 @@ CREATE TABLE `software_instalado` (
 
 CREATE TABLE `ubicaciones` (
   `idUbicacion` int(11) NOT NULL,
-  `NombreNuevo` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
-  `NombreAntiguo` varchar(30) COLLATE utf8_unicode_ci NOT NULL
+  `Ubicacion` varchar(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
