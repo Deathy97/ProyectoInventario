@@ -21,6 +21,6 @@ VALUES ('$ap','$prov','$marca','$mod','$num','$can','$fec','$usuario','$gar','$u
 // ejecutamosla consulta
 mysqli_query($conexion, $sql) or die("Error en la consulta de insercion $sql");
 mysqli_close($conexion);
-//
+
 header("location:formmateriales.php");
 ?>
