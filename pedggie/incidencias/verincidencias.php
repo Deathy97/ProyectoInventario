@@ -163,18 +163,18 @@ include("../conexion.php");
   <tr align="center" bgcolor="black">
 		<th>idIncidencia</th>
 		<th>Aparato</th>
+		<th>Usuario</th>
+    <th>Incidencia</th>
 		<th>FechaIncidencia</th>
-		<th>Incidencia</th>
+    <th>Solucion</th>
 		<th>FechaSolucion</th>
-		<th>Solucion</th>
-		<th>idUsuario</th>
     <th>Borrar</th>
 <!-- aqui falta el dniUsuario que debera rellenarse con el usuario logeado; aun no sabemos hacerlo-->
 	</tr><td></td>
 <?php
 include("./../conexion.php");
 //creamos ula consulta1
-$sql = "SELECT i.idIncidencia, m.Aparato, u.Usuario, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion FROM incidencias as i, usuarios as u, materiales as m WHERE i.idUsuario=u.Dni AND i.idMaterial=m.idReferencia;";
+$sql = "SELECT i.idIncidencia, m.Aparato, u.Usuario, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion, u.Apellidos FROM incidencias as i, usuarios as u, materiales as m WHERE i.idUsuario=u.Dni AND i.idMaterial=m.idReferencia;";
 //ejecutamos la consulta
 $registros=mysqli_query($conexion, $sql);
 //leemos el contenido de $registros
@@ -182,11 +182,11 @@ while($linea=mysqli_fetch_array($registros)){
 	echo "<tr>
           <td>$linea[idIncidencia]</td>
           <td>$linea[Aparato]</td>
-          <td>$linea[FechaIncidencia]</td>
+          <td>$linea[Usuario]&nbsp;$linea[Apellidos]</td>
           <td>$linea[Incidencia]</td>
-          <td>$linea[FechaSolucion]</td>
+          <td>$linea[FechaIncidencia]</td>
           <td>$linea[Solucion]</td>
-          <td>$linea[Usuario]</td>
+          <td>$linea[FechaSolucion]</td>
           <td><a href='borincidencias.php?clave=$linea[idIncidencia]'><img src='../imagenes/basura.png' width='25px'></td>
         </tr>";
 	echo "<tr><td colspan=8><hr></td></tr>";
