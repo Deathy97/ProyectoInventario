@@ -1,18 +1,32 @@
+<!DOCTYPE html>
+<!--
+Template Name: Pedggie
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
 <html>
 <head>
+<head>
 	<title>formmateriales</title>
-	<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+		<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
 		<script language="JavaScript">
 		$(document).ready(function(){
-			var DifenciadorSubmit=0
+			var DiferenciadorSubmit=0;
 			$("#impresoras").click(function(){
 				$("#botones").hide();
 				$("#formmonitores").hide();
 				$("#formordenadores").hide();
 
-				$("#formimpresoras").hide().css('visibility', 'visible').show(2000);
+				//$("#formimpresoras").hide().css('visibility', 'visible').show(2000);
+				$("#formimpresoras").css('visibility', 'visible');
+
 				$("#enviar").css('visibility', 'visible');
-				DifenciadorSubmit=1;
+				DiferenciadorSubmit=1;
 			});
 
 			$("#monitores").click(function(){
@@ -20,9 +34,10 @@
 				$("#formimpresoras").hide();
 				$("#formordenadores").hide();
 
-				$("#formmonitores").hide().css('visibility', 'visible').show(2000);
+				//$("#formmonitores").hide().css('visibility', 'visible').show(2000);
+				$("#formmonitores").css('visibility', 'visible');
 				$("#enviar").css('visibility', 'visible');
-				DifenciadorSubmit=2;
+				DiferenciadorSubmit=2;
 			});
 
 			$("#ordenadores").click(function(){
@@ -30,9 +45,10 @@
 				$("#formimpresoras").hide();
 				$("#formmonitores").hide();
 
-				$("#formordenadores").hide().css('visibility', 'visible').show(2000);
+				//$("#formordenadores").hide().css('visibility', 'visible').show(2000);
+				$("#formordenadores").css('visibility', 'visible');
 				$("#enviar").css('visibility', 'visible');
-				DifenciadorSubmit=3;
+				DiferenciadorSubmit=3;
 			});
 
 			$("#otro").click(function(){
@@ -41,42 +57,169 @@
 				$("#formmonitores").hide();
 				$("#formordenadores").hide();
 
-				$("#enviar").hide().css('visibility', 'visible').show(2000);
-				DifenciadorSubmit=4;
+				//$("#enviar").hide().css('visibility', 'visible').show(2000);
+				$("#enviar").css('visibility', 'visible');
+				DiferenciadorSubmit=4;
+
 			});
 			$("#enviar").click(function(){
-				if(DifenciadorSubmit=1){
-					$("#formmateriales,#formimpresoras").onsubmit();
-					//$("#formimpresoras").submit();
-				}
-				if(DifenciadorSubmit=2){
-					$("#formmateriales,#formmonitores").submit();
-					//$("#formmonitores").submit();
-				}
-				if(DifenciadorSubmit=3){
+				    url='insmateriales.php?numero='+DiferenciadorSubmit;
+					$("#formmateriales").attr('action',url);
 					$("#formmateriales").submit();
-					$("#formordenadores").submit();
-				}
-					
-				if(DifenciadorSubmit=4){
-					$("#formmateriales").submit();
-				}
+				
 			});
 		});
 		</script>
-
 </head>
-<body>
+<body id="top">
 <?php
-include("./../conexion.php");
+session_start();
+include("../conexion.php");
 ?>
-<form name="formateriales" id="formmateriales" method="post" target="_blank" action="insmateriales.php">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="fl_left">
+      <ul class="nospace inline pushright">
+        <li><i class="fa fa-phone"></i> 976 30 68 78</li>
+        <li><i class="fa fa-envelope-o"></i> secretaria.zaragoza@salesianos.edu</li>
+      </ul>
+    </div>
+    <div class="fl_right">
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+        <li><a class="faicon-twitter" href="https://twitter.com/salesianosZAR?lang=es"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-dribble" href="#"><i class="fa fa-dribbble"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+        <li><a class="faicon-rss" href="#"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    
+     <div id="logo" style="position:absolute; taxt-align:centre; width: 60%; margin: -20px;">
+      <a href="../home.php"><img src="../imagenes/logo1.png" style="width: 150px; margin-right: 40px;"></a>
+    </div>
+    <div id="titulo" style="margin-left: 40%;">
+     <a href="../home.php"><h1 style="font-size:250%;">Inventario</h1></a>
+    </div>
+
+    <div id="quickinfo" class="fl_right" style="float:right; text-align:right">
+      <ul class="nospace inline">
+        <?php echo "<li><strong>Usuario: $_SESSION[nombreusuario]</strong></li><br>
+        <li><strong>Dni: $_SESSION[dniusuario]</strong></li>"?>
+        <li><a href="../logout.php"><strong>Salir</strong></a></li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <nav id="mainav" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+      <li class="active"><a href="../home.php">Home</a></li>
+      <li><a class="drop" href="#">MATERIALES</a>
+        <ul>
+            <li><a href="../materiales/vermateriales.php">VER</a></li>
+            <li><a href="../materiales/formmateriales.php">NUEVO</a></li>
+        </ul>
+      </li>
+      <li><a class="drop" href="#">INCIDENCIAS</a>
+        <ul>
+            <li><a href="../incidencias/verincidencias.php">VER</a></li>
+            <li><a href="../incidencias/formincidencias.php">NUEVA</a></li>
+        </ul>
+      </li>
+      <li><a class="drop" href="">REVISIONES</a>
+        <ul>
+            <li><a href="../revisiones/verrevisiones.php">VER</a></li>
+            <li><a href="../revisiones/formrevisiones.php">NUEVA</a></li>
+        </ul>
+      </li>
+      <li><a class="drop" href="">SOFTWARE</a>
+        <ul>
+            <li><a href="../software/versoftware.php">VER</a></li>
+            <li><a href="../software/formsoftware.php">NUEVO</a></li>
+        </ul>
+      </li>
+      <li><a class="drop" href="">MÁS</a>
+        <ul>
+              <li><a class="drop" href="">MARCAS</a>
+                <ul>
+                  <li><a href="../marcas/vermarcas.php">VER</a></li>
+                  <li><a href="../marcas/formmarcas.php">NUEVO</a></li>
+                </ul>
+              </li>
+              <li><a class="drop" href="">PROVEEDORES</a>
+                <ul>
+                  <li><a href="../proveedores/verproveedores.php">VER</a></li>
+                  <li><a href="../proveedores/formproveedores.php">NUEVO</a></li>
+                </ul>
+              </li>
+              <li><a class="drop" href="">UBICACIONES</a>
+                <ul>
+                  <li><a href="../ubicaciones/verubicaciones.php">VER</a></li>
+                  <li><a href="../ubicaciones/formubicaciones.php">NUEVO</a></li>
+                </ul>
+              </li>
+              <li><a class="drop" href="">USUARIOS</a>
+              <ul>
+                <li><a href="../usuarios/verusuarios.php">VER</a></li>
+                <li><a href="../usuarios/formusuarios.php">NUEVO</a></li>
+              </ul>
+            </li>
+        </ul>
+      </li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <div id="breadcrumb" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul>
+      <li><a href="../home.php">Home</a></li>
+      <li><a href="vermateriales.php">Ver materiales</a></li>
+    
+    </ul>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      
+      <h1><FIELDSET>FORMULARIO DE MATERIALES</FIELDSET></h1>
+
+      <div class="scrollable">
+
+        
+        <form name="formateriales" id="formmateriales" method="post">
 <table align="center" width="50%">
-	<tr>
-		<td colspan="2" style="text-align: center">
-			<h3>AÑADIR MATERIALES</h3>
-		</td>
-	</tr>
 	<tr>
 		<td>Aparato: </td>
 		<td>
@@ -204,7 +347,6 @@ include("./../conexion.php");
 		</td>
 	</tr>
 </table>
-</form>
 
 <table id="botones" align="center" width="50%">
 	<tr>
@@ -223,9 +365,7 @@ include("./../conexion.php");
 	</tr>
 </table>
 
-
-<form name="formimpresoras" id="formimpresoras" style="visibility: hidden" method="post" action="insimpresoras.php">
-<table align="center" width="50%">
+<table align="center" width="50%" style="visibility: hidden" id="formimpresoras">
 	<tr>
 		<td>Tipo </td>
 		<td>
@@ -244,10 +384,8 @@ include("./../conexion.php");
 		</td>
 	</tr>
 </table>
-</form>
 
-	<form name="formmonitores" id="formmonitores" style="visibility: hidden" method="post" action="insmonitores.php">
-			<table align="center" width="50%">
+			<table align="center" width="50%"  style="visibility: hidden"  id="formmonitores">
 				<tr>
 		        	<td>Tamaño pantalla en pulgadas: </td>
 		        	<td><input type="text" name="tamaño" id="tamaño" placeholder=" ejemplo 23 "></td> 
@@ -265,10 +403,8 @@ include("./../conexion.php");
           			</td> 
           		</tr>		
 			</table>
-		</form>
 
-		<form name="formordenadores" id="formordenadores" style="visibility: hidden" method="post" action="insordenadores.php">
-			<table align="center" width="50%">
+			<table align="center" width="50%" style="visibility: hidden" id="formordenadores">
 				<tr>
 		        	<td>Placa base</td>
 		        	<td><input type="text" name="placa" id="placa" placeholder=" placa base "></td> 
@@ -301,7 +437,7 @@ include("./../conexion.php");
 		        	<td><input type="dominio" name="dominio" id="dominio" placeholder=" dominio "></td> 
 		        </tr>			
 			</table>
-		</form>
+</form>
 
 		<table id="enviar" align="center" width="50%" style="visibility: hidden">
 			<tr>
@@ -311,5 +447,109 @@ include("./../conexion.php");
 			</tr>
 		</table>
 
+
+      </div>
+        
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4">
+   <footer id="footer" class="hoc clear" > 
+    <!-- ################################################################################################ -->
+    <div  >
+      <h6 class="title">Contacto</h6>
+      <ul class="nospace linklist contact" >
+        <li><i class="fa fa-map-marker"></i>
+          <address>
+          Calle María Auxiliadora, 57, 50009 Zaragoza
+          </address>
+        </li>
+        <li><i class="fa fa-phone"></i> 976 30 68 78<br></li>
+        <li><i class="fa fa-envelope-o"></i> secretaria.zaragoza@salesianos.edu</li>
+      </ul>
+    </div>
+    
+    
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2017 - Todos los derechos reservados - <a href="#">Salesianos Zaragoza</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<!-- IE9 Placeholder Support -->
+<script src="layout/scripts/jquery.placeholder.min.js"></script>
+<!-- / IE9 Placeholder Support -->
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

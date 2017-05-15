@@ -1,5 +1,6 @@
 
 <?php
+//session_start();
 	//recuperamos datos del formulario
 	$pla=$_POST['placa']; 
 	$pro=$_POST['procesador'];  
@@ -12,9 +13,9 @@
 
 	//conectamos con la base de datos
 	include("./../conexion.php");
-
+    //echo $_SESSION['nextid'];
 	//creamos consulta
-	$sql="INSERT INTO ordenadores(Placa,Procesador,Ram,DiscoDuro,Tarjetas,Ip,Dominio) values('$pla','$pro','$ram','$dis','$tar','$ip','$dom')";
+	$sql="INSERT INTO ordenadores(idReferencia,Placa,Procesador,Ram,DiscoDuro,Tarjetas,Ip,Dominio) values(4,'$pla','$pro','$ram','$dis','$tar','$ip','$dom')";
 
 	//cuidado al pasar los datos porque hay algunos de tipo texto entonces hay que pasar comillas para que se guarde como texto
 
