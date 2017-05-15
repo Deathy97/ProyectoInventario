@@ -159,7 +159,7 @@ include("../conexion.php");
       <div class="scrollable">
 
         
-        <table align="center" width="50%">
+        <table align="center" width="70%">
   <tr align="center" bgcolor="black">
 		<th>idIncidencia</th>
 		<th>Aparato</th>
@@ -173,7 +173,7 @@ include("../conexion.php");
 <?php
 include("./../conexion.php");
 //creamos ula consulta1
-$sql = "SELECT i.idIncidencia, i.idMaterial, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion, i.idUsuario FROM incidencias as i;";
+$sql = "SELECT i.idIncidencia, i.idMaterial, i.idUsuario, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion FROM incidencias as i;";
 //ejecutamos la consulta
 $registros=mysqli_query($conexion, $sql);
 //leemos el contenido de $registros

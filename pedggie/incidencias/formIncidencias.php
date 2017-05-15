@@ -140,7 +140,7 @@ include("../conexion.php");
     <!-- ################################################################################################ -->
     <ul>
       <li><a href="../home.php">Home</a></li>
-      <li><a href="verrevisiones.php">Ver incidencias</a></li>
+      <li><a href="formincidencias.php">Insertar incidencias</a></li>
     
     </ul>
     <!-- ################################################################################################ -->
@@ -155,15 +155,10 @@ include("../conexion.php");
     <!-- ################################################################################################ -->
     <div class="content"> 
       
-    <h1><FIELDSET>FORMULARIO DE REVISIONES</FIELDSET></h1>
+    <h1><FIELDSET>FORMULARIO DE INCIDENCIAS</FIELDSET></h1>
       <div class="scrollable">
 <form name="incidencias" id="incidencias" method="post" action="insincidencias.php">
 <table align="center" width="50%" border="1px solid"; border-radius: 5px;">
-  <tr>
-    <td colspan="2" style="text-align: center">
-      <h3>CREAR INCIDENCIA</h3>
-    </td>
-  </tr>
   <tr>
     <td width="50%">Numero interno: </td>
     <td>
