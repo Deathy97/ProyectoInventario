@@ -52,7 +52,7 @@ include("../conexion.php");
     <!-- ################################################################################################ -->
     
     <div id="logo" style="position:absolute; taxt-align:centre; width: 60%; margin: -20px;">
-      <img src="../imagenes/logo1.png" style="width: 150px; margin-right: 40px;">
+      <a href="./../home.php"><img src="../imagenes/logo1.png" style="width: 150px; margin-right: 40px;"></a>
     </div>
     <div id="titulo" style="margin-left: 40%;">
      <h1 style="font-size:250%;"><a href="../home.php">Inventario</a></h5>
@@ -140,7 +140,7 @@ include("../conexion.php");
     <!-- ################################################################################################ -->
     <ul>
       <li><a href="../home.php">Home</a></li>
-      <li><a href="formincidencias.php">Insertar incidencias</a></li>
+      <li><a href="verincidencias.php">Ver incidencias</a></li>
     
     </ul>
     <!-- ################################################################################################ -->
@@ -160,9 +160,18 @@ include("../conexion.php");
 <form name="incidencias" id="incidencias" method="post" action="insincidencias.php">
 <table align="center" width="50%" border="1px solid"; border-radius: 5px;">
   <tr>
-    <td width="50%">Numero interno: </td>
+    <td>Material: </td>
     <td>
-      <input type="text" name="NumInterno" id="NumInterno" placeholder="Inserte número interno.">
+      <select name="idMaterial" id="idMaterial" style="width: 300px;">
+        <option value=""></option>
+          <?php
+          $sql = "SELECT * FROM materiales";
+          $registros = mysqli_query($conexion, $sql);
+          while($linea=mysqli_fetch_array($registros)){
+            echo "<option value='$linea[idReferencia]'>$linea[Aparato]";
+          }
+          ?>
+      </select>
     </td>
   </tr>
   <tr>

@@ -52,7 +52,7 @@ include("../conexion.php");
     <!-- ################################################################################################ -->
     
     <div id="logo" style="position:absolute; taxt-align:centre; width: 60%; margin: -20px;">
-      <img src="../imagenes/logo1.png" style="width: 150px; margin-right: 40px;">
+      <a href="./../home.php"><img src="../imagenes/logo1.png" style="width: 150px; margin-right: 40px;"></a>
     </div>
     <div id="titulo" style="margin-left: 40%;">
      <h1 style="font-size:250%;"><a href="../home.php">Inventario</a></h5>
@@ -140,7 +140,7 @@ include("../conexion.php");
     <!-- ################################################################################################ -->
     <ul>
       <li><a href="../home.php">Home</a></li>
-      <li><a href="verincidencias.php">Ver incidencias</a></li>
+      <li><a href="formincidencias.php">Insertar incidencia</a></li>
     
     </ul>
     <!-- ################################################################################################ -->
@@ -168,12 +168,13 @@ include("../conexion.php");
 		<th>FechaSolucion</th>
 		<th>Solucion</th>
 		<th>idUsuario</th>
+    <th>Borrar</th>
 <!-- aqui falta el dniUsuario que debera rellenarse con el usuario logeado; aun no sabemos hacerlo-->
 	</tr><td></td>
 <?php
 include("./../conexion.php");
 //creamos ula consulta1
-$sql = "SELECT i.idIncidencia, i.idMaterial, i.idUsuario, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion FROM incidencias as i;";
+$sql = "SELECT i.idIncidencia, i.idMaterial, u.Usuario, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion FROM incidencias as i, usuarios as u WHERE i.idUsuario=u.Dni;";
 //ejecutamos la consulta
 $registros=mysqli_query($conexion, $sql);
 //leemos el contenido de $registros
@@ -185,7 +186,7 @@ while($linea=mysqli_fetch_array($registros)){
           <td>$linea[Incidencia]</td>
           <td>$linea[FechaSolucion]</td>
           <td>$linea[Solucion]</td>
-          <td>$linea[idUsuario]</td>
+          <td>$linea[Usuario]</td>
           <td><a href='borincidencias.php?clave=$linea[idIncidencia]'><img src='../imagenes/basura.png' width='25px'></td>
         </tr>";
 	echo "<tr><td colspan=8><hr></td></tr>";
