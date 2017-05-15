@@ -171,10 +171,10 @@ include("../conexion.php");
   </tr>
 <?php
   include("./../conexion.php");
-  $sql = "SELECT r.idRevision, m.Aparato, r.FechaRevision, r.hora, u.Usuario, r.Observaciones FROM revisiones AS r, usuarios as u, materiales as m WHERE r.idMaterial=m.idReferencia AND u.dni=r.idUsuario;";
+  $sql = "SELECT r.idRevision, m.Aparato, r.FechaRevision, r.hora, u.Usuario, r.Observaciones FROM revisiones AS r, usuarios as u, materiales as m WHERE r.idMaterial=m.idReferencia AND u.Dni=r.idUsuario;";
   $registros=mysqli_query($conexion, $sql);
   while($linea=mysqli_fetch_array($registros)){
-    echo "<tr><td>$linea[idRevision]</td><td>$linea[Aparato]</td><td>$linea[FechaRevision]</td><td>$linea[hora]</td><td>$linea[Usuario]</td><td>$linea[Observaciones]</td><td align='center'><a href='borrevisiones.php?clave=$linea[idRevision]'><img src='./../imagenes/basura.png'></a></td></tr>";
+    echo "<tr><td>$linea[idRevision]</td><td>$linea[Aparato]</td><td>$linea[FechaRevision]</td><td>$linea[hora]</td><td>$linea[Usuario]</td><td>$linea[Observaciones]</td><td align='center'><a href='borrevisiones.php?clave=$linea[idRevision]'><img src='./../imagenes/basura.png'></td></tr>";
     echo "<tr><td colspan=7><hr></td></tr>";
 }
 mysqli_close($conexion);

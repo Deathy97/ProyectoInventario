@@ -174,14 +174,14 @@ include("../conexion.php");
 <?php
 include("./../conexion.php");
 //creamos ula consulta1
-$sql = "SELECT i.idIncidencia, i.idMaterial, u.Usuario, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion FROM incidencias as i, usuarios as u WHERE i.idUsuario=u.Dni;";
+$sql = "SELECT i.idIncidencia, m.Aparato, u.Usuario, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion FROM incidencias as i, usuarios as u, materiales as m WHERE i.idUsuario=u.Dni AND i.idMaterial=m.idReferencia;";
 //ejecutamos la consulta
 $registros=mysqli_query($conexion, $sql);
 //leemos el contenido de $registros
 while($linea=mysqli_fetch_array($registros)){
 	echo "<tr>
           <td>$linea[idIncidencia]</td>
-          <td>$linea[idMaterial]</td>
+          <td>$linea[Aparato]</td>
           <td>$linea[FechaIncidencia]</td>
           <td>$linea[Incidencia]</td>
           <td>$linea[FechaSolucion]</td>
