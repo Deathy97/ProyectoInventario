@@ -52,7 +52,7 @@ include("../conexion.php");
     <!-- ################################################################################################ -->
     
     <div id="logo" style="position:absolute; taxt-align:centre; width: 60%; margin: -20px;">
-      <img src="../imagenes/logo1.png" style="width: 150px; margin-right: 40px;">
+      <a href="./../home.php"><img src="../imagenes/logo1.png" style="width: 150px; margin-right: 40px;"></a>
     </div>
     <div id="titulo" style="margin-left: 40%;">
      <h1 style="font-size:250%;"><a href="../home.php">Inventario</a></h5>
@@ -174,7 +174,7 @@ include("../conexion.php");
   $sql = "SELECT r.idRevision, m.Aparato, r.FechaRevision, r.hora, u.Usuario, r.Observaciones FROM revisiones AS r, usuarios as u, materiales as m WHERE r.idMaterial=m.idReferencia AND u.dni=r.idUsuario;";
   $registros=mysqli_query($conexion, $sql);
   while($linea=mysqli_fetch_array($registros)){
-    echo "<tr><td>$linea[idRevision]</td><td>$linea[Aparato]</td><td>$linea[FechaRevision]</td><td>$linea[hora]</td><td>$linea[Usuario]</td><td>$linea[Observaciones]</td><td align='center'><a href='borrevisiones.php?clave=$linea[idRevision]'><img src='./../imagenes/basura.png'></td></tr>";
+    echo "<tr><td>$linea[idRevision]</td><td>$linea[Aparato]</td><td>$linea[FechaRevision]</td><td>$linea[hora]</td><td>$linea[Usuario]</td><td>$linea[Observaciones]</td><td align='center'><a href='borrevisiones.php?clave=$linea[idRevision]'><img src='./../imagenes/basura.png'></a></td></tr>";
     echo "<tr><td colspan=7><hr></td></tr>";
 }
 mysqli_close($conexion);
