@@ -163,11 +163,6 @@ include("./../conexion.php");
 <form name="software" id="software" method="post" action="inssoftware.php">
 <table align="center" width="50%" border="1px solid">
   <tr>
-    <td colspan="2" style="text-align: center">
-      <h3>INSERTAR SOFTWARE</h3>
-    </td>
-  </tr>
-  <tr>
     <td>Descripción: </td>
     <td>
       <textarea name="Descripcion" id="Descripcion" placeholder="Añada una descrición." cols="40" rows="4"></textarea>
