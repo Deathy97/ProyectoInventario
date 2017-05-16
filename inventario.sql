@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-05-2017 a las 19:21:20
+-- Tiempo de generación: 16-05-2017 a las 08:23:49
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 5.6.30
 
@@ -70,7 +70,7 @@ CREATE TABLE `materiales` (
   `Aparato` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `NifProveedor` varchar(9) COLLATE utf8_unicode_ci NOT NULL,
   `idMarca` int(11) NOT NULL,
-  `Modelo` int(11) NOT NULL,
+  `Modelo` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
   `NumSerie` int(11) NOT NULL,
   `Cantidad` int(11) NOT NULL,
   `FechaEntrada` date NOT NULL,
