@@ -265,7 +265,7 @@ include("../conexion.php");
 	<tr>
 		<td >Modelo: </td>
 		<td>
-			<input type="number" name="mod" id="mod" placeholder="Modelo">
+			<input type="text" name="mod" id="mod" placeholder="Modelo">
 		</td>
 	</tr>
 	<tr>
