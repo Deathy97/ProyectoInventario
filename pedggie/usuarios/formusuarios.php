@@ -155,7 +155,7 @@ include("../conexion.php");
     <!-- ################################################################################################ -->
     <div class="content"> 
       
-      <h1><FIELDSET>FORMULARIO USUARIOS</FIELDSET></h1>
+      <h1><FIELDSET>FORMULARIO DE USUARIOS</FIELDSET></h1>
       <div class="scrollable">
 
 

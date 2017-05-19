@@ -189,7 +189,7 @@ include("../conexion.php");
     <!-- ################################################################################################ -->
     <div class="content"> 
       
-      <h1><FIELDSET>VER MATERIALES</FIELDSET></h1>
+      <h1><FIELDSET>CUADRO DE MATERIALES</FIELDSET></h1>
 
       <div class="scrollable" style="overflow: scroll;">
 
