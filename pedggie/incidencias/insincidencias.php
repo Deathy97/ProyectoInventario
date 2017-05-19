@@ -27,7 +27,7 @@ $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;                                    
 
 $mail->setFrom('inventariosalesianos@gmail.com', 'Incidencias');// aqui se pone el nombre que aparece como emisor del correo(en el lugar de Incidencias)
-$mail->addAddress('rafatorrea@hotmail.com', 'Rafa'); //Direccion del correo que recive el mensaje, creo que se pueden poner varios seguidos ('primero@g.com','segundo@g.com',nombre del receptor)
+$mail->addAddress('rafatorrea@hotmail.com', 'RafaMola'); //Direccion del correo que recive el mensaje, creo que se pueden poner varios seguidos ('primero@g.com','segundo@g.com',nombre del receptor)
 
 $mail->Subject = 'Incidencia';//este es el asunto
 $mail->Body    = $Incidencia; //Body del Correo
