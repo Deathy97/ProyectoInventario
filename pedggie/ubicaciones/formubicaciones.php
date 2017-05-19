@@ -162,7 +162,7 @@ include("../conexion.php");
   <tr>
     <td>Ubicación: </td>
     <td>
-      <input type="text" name="ubicaciones" id="ubicaciones" placeholder="Inserte ubicación">
+      <input type="text" name="Ubicacion" id="Ubicacion" placeholder="Inserte ubicación">
     </td>
   </tr>
   <tr>
