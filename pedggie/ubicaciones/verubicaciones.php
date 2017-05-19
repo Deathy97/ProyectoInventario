@@ -168,7 +168,7 @@ include("../conexion.php");
   </tr><td></td>
 <?php
   include("./../conexion.php");
-  $sql = "SELECT ubicacion FROM ubicaciones;";
+  $sql = "SELECT * FROM ubicaciones;";
   $registros=mysqli_query($conexion, $sql);
   while($linea=mysqli_fetch_array($registros)){
     echo "<tr><td>$linea[idUbicacion]</td><td>$linea[Ubicacion]</td><td><a href='borubicaciones.php?clave=$linea[idUbicacion]'><img src='./../imagenes/basura.png'></td></tr>";
