@@ -160,12 +160,12 @@ include("../conexion.php");
         <table align="center" width="80%">
         
           <tr>
-            <th>Dni</th><th>Clave</th><th>Nombre</th><th>Apellidos</th><th>Puesto</th><th>Borrar</th>
+            <th>Dni</th><th>Clave</th><th>Nombre</th><th>Apellidos</th><th>Email</th><th>Puesto</th><th>Borrar</th>
           </tr>
           <?php
             include("../conexion.php");
             //creamos la consulta
-            $sql="SELECT u.Dni,u.Clave,u.Usuario,u.Apellidos,p.Puesto
+            $sql="SELECT u.Dni,u.Clave,u.Usuario,u.Apellidos,u.Email,p.Puesto
               FROM usuarios as u, puestos as p
               where u.idPuesto=p.idPuesto;";
 
@@ -178,6 +178,7 @@ include("../conexion.php");
                   <td>$linea[Clave]</td>
                   <td>$linea[Usuario]</td>
                   <td>$linea[Apellidos]</td>
+                  <td>$linea[Email]</td>
                   <td>$linea[Puesto]</td>
                   <td align='center'><a href='borrarusuarios.php?clave=$linea[Dni]'><img width='30' src='../imagenes/basura.png'></a></td>
                 </tr>"; //el ? pasa el parametro 'clave' a la pagina borralumnos

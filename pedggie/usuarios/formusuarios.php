@@ -179,6 +179,10 @@ include("../conexion.php");
           <td><input type="text" name="apellidos" id="apellidos" placeholder="apellidos"></td> <!-- placeholder es el texto que sale difuminado dentro del recuadro-->
         </tr>
         <tr>
+          <td>Email: </td>
+          <td><input type="email" name="correo" id="correo" placeholder="email"></td> <!-- placeholder es el texto que sale difuminado dentro del recuadro-->
+        </tr>
+        <tr>
           <td>Puesto:</td>
           <td><select name="puesto" id="puesto">
             <option value="">

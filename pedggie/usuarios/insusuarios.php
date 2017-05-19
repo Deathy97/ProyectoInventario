@@ -4,13 +4,14 @@
 	$cla=$_POST['clave'];  
 	$nom=$_POST['nombre']; 
 	$ape=$_POST['apellidos']; 
+	$cor=$_POST['correo']; 
 	$pue=$_POST['puesto'];  //nombres de input o select del formulario
 
 	//conectamos con la base de datos
 	include("./../conexion.php");
 
 	//creamos consulta
-	$sql="INSERT INTO usuarios(Dni,Clave,Usuario,Apellidos,idPuesto) values('$dni','$cla','$nom','$ape','$pue')";
+	$sql="INSERT INTO usuarios(Dni,Clave,Usuario,Apellidos,Email,idPuesto) values('$dni','$cla','$nom','$ape','$cor','$pue')";
 
 	//cuidado al pasar los datos porque hay algunos de tipo texto entonces hay que pasar comillas para que se guarde como texto
 
