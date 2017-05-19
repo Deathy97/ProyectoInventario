@@ -155,7 +155,7 @@ include("../conexion.php");
     <!-- ################################################################################################ -->
     <div class="content"> 
       
-    <h1><FIELDSET>CUADRO DE SOFTWARES</FIELDSET></h1>
+    <h1><FIELDSET>CUADRO DE MARCAS</FIELDSET></h1>
       <div class="scrollable">
 
         
