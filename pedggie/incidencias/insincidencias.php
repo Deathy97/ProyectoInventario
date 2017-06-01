@@ -6,6 +6,24 @@ $Incidencia=$_POST['Incidencia'];
 $FechaSolucion=$_POST['FechaSolucion'];
 $Solucion=$_POST['Solucion'];
 $idUsuario=$_POST['idUsuario'];
+
+//Emails
+$correos = array("rafatorrea@hotmail.com", "rafatorrea@gmail.com","hisrubio51@gmail.com");
+
+
+/*$sql1="SELECT Email FROM usuarios WHERE idPuesto=1"
+$correo = mysqli_query($conexion, $sql1)or die("Error en la consulta de insercion $sql");
+$num = mysqli_num_rows($sql1);
+	
+	if($num > 0){
+		for ($c=0; $c <$num ; $c++) { 
+			$verCorreos = mysqli_fetch_array($sql1);
+			$correos[$c] = $verCorreos['Email'];
+		}
+
+}*/
+
+
 // conectamos con la BD
 include("./../conexion.php");
 // creamos consulta
@@ -13,7 +31,6 @@ $sql="INSERT INTO incidencias(idMaterial, FechaIncidencia, Incidencia, FechaSolu
 //mail
 
 require '/xampp/htdocs/pedggie/incidencias/PHPMailer/PHPMailerAutoload.php';
-
 $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                             
@@ -26,8 +43,11 @@ $mail->Password = 'IVSZ1h12';
 $mail->SMTPSecure = 'ssl';                            
 $mail->Port = 465;                                    
 
-$mail->setFrom('inventariosalesianos@gmail.com', 'Incidencias');// aqui se pone el nombre que aparece como emisor del correo(en el lugar de Incidencias)
-$mail->addAddress('rafatorrea@hotmail.com', 'RafaMola'); //Direccion del correo que recive el mensaje, creo que se pueden poner varios seguidos ('primero@g.com','segundo@g.com',nombre del receptor)
+$mail->setFrom('inventariosalesianos@gmail.com', 'Don Bosco te vigila');// aqui se pone el nombre que aparece como emisor del correo(en el lugar de Incidencias)
+
+$max = sizeof($correos);
+for ($i = 0; $i < $max; $i++)
+$mail->addAddress($correos[$i], 'RafaMola'); //Direccion del correo que recive el mensaje, creo que se pueden poner varios seguidos ('primero@g.com','segundo@g.com',nombre del receptor)
 
 $mail->Subject = 'Incidencia';//este es el asunto
 $mail->Body    = $Incidencia; //Body del Correo
