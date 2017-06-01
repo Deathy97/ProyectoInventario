@@ -169,7 +169,7 @@ include("../conexion.php");
   </tr>
   <tr>
     <td colspan="2" style="text-align: center" >
-      <h3><input type="submit" name="Enviar" id="Enviar" value="Añadir" placeholder="Enviar"></h3>
+    <input style="margin: auto;" type="submit" name="Enviar" id="Enviar" value="Enviar" placeholder="Enviar">
     </td>
   </tr>
 </table>
