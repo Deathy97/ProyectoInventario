@@ -53,7 +53,6 @@ if($numero==3){
 	$sql3="INSERT INTO ordenadores(idReferencia,Placa,Procesador,Ram,DiscoDuro,Tarjetas,Ip,Dominio) values($siguiente,'$pla','$pro','$ram','$dis','$tar','$ip','$dom')";
 	mysqli_query($conexion, $sql3) or die("Error en la consulta de insercion $sql3");	
 }
-
 mysqli_close($conexion);
 
 header("location:formmateriales.php");

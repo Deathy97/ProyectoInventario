@@ -16,6 +16,8 @@ Licence URI: http://www.os-templates.com/template-terms
 <body id="top">
 <?php
 session_start();
+if($_SESSION['Puesto']!='Sat')
+  header("location:index.php");
 include("conexion.php");
 ?>
 <!-- ################################################################################################ -->
@@ -52,10 +54,10 @@ include("conexion.php");
     <!-- ################################################################################################ -->
     
     <div id="logo" style="position:absolute; taxt-align:centre; width: 60%; margin: -20px;">
-      <a href="home.php"><img src="imagenes/logo1.png" style="width: 150px; margin-right: 40px;"></a>
+      <a href="homeSat.php"><img src="imagenes/logo1.png" style="width: 150px; margin-right: 40px;"></a>
     </div>
     <div id="titulo" style="margin-left: 40%;">
-     <a href="home.php"><h1 style="font-size:250%;">Inventario</h1></a>
+     <a href="homeSat.php"><h1 style="font-size:250%;">Inventario</h1></a>
     </div>
 
     <div id="quickinfo" class="fl_right" style="float:right; text-align:right">
@@ -75,10 +77,11 @@ include("conexion.php");
   <nav id="mainav" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <ul class="clear">
-      <li class="active"><a href="home.php">Home</a></li>
+      <li class="active"><a href="homeSat.php">Home</a></li>
       <li><a class="drop" href="materiales/vermateriales.php">MATERIALES</a>
         <ul>
             <li><a href="materiales/vermateriales.php">VER</a></li>
+            <li><a href="materiales/formmateriales.php">NUEVO</a></li>
         </ul>
       </li>
       <li><a class="drop" href="incidencias/verincidencias.php">INCIDENCIAS</a>
