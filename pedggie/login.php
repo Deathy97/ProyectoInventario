@@ -22,6 +22,7 @@ if($total==0){
 				//variables de sesion, el valor perdura mientras el usuario navega y hay que poner al principio session_start();
 				$_SESSION['dniusuario']=$linea['Dni']; 
 				$_SESSION['nombreusuario']=$linea['Usuario'];
+				$_SESSION['Puesto']=$linea['Puesto'];
 
 				if($linea['Puesto']=='Encargado')
 					header("location:home.php");

@@ -16,6 +16,8 @@ Licence URI: http://www.os-templates.com/template-terms
 <body id="top">
 <?php
 session_start();
+if(!isset($_SESSION['dniusuario']))
+  header("location:../index.php");
 include("../conexion.php");
 ?>
 <!-- ################################################################################################ -->

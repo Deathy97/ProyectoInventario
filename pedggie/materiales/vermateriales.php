@@ -50,6 +50,8 @@ Licence URI: http://www.os-templates.com/template-terms
 <body id="top">
 <?php
 session_start();
+if(!isset($_SESSION['dniusuario']))
+  header("location:../index.php");
 include("../conexion.php");
 ?>
 <!-- ################################################################################################ -->
@@ -85,11 +87,20 @@ include("../conexion.php");
   <header id="header" class="hoc clear"> 
     <!-- ################################################################################################ -->
     
-     <div id="logo" style="position:absolute; taxt-align:centre; width: 60%; margin: -20px;">
-      <a href="../home.php"><img src="../imagenes/logo1.png" style="width: 150px; margin-right: 40px;"></a>
+    <div id="logo" style="position:absolute; taxt-align:centre; width: 60%; margin: -20px;">
+      <?php
+          if($_SESSION['Puesto']=='Encargado')
+            echo "<a href='../home.php'>";
+            else
+              if($_SESSION['Puesto']=='Sat')
+                echo "<a href='../homeSat.php'>";              
+              else
+                if($_SESSION['Puesto']=='Profesor')
+                  echo "<a href='../homeProf.php'>";          
+          ?><img src="../imagenes/logo1.png" style="width: 150px; margin-right: 40px;"></a>
     </div>
     <div id="titulo" style="margin-left: 40%;">
-     <a href="../home.php"><h1 style="font-size:250%;">Inventario</h1></a>
+     <h1 style="font-size:250%;"><a href="#">Inventario</a></h5>
     </div>
 
     <div id="quickinfo" class="fl_right" style="float:right; text-align:right">
@@ -109,55 +120,90 @@ include("../conexion.php");
   <nav id="mainav" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <ul class="clear">
-      <li class="active"><a href="../home.php">Home</a></li>
-      <li><a class="drop" href="#">MATERIALES</a>
-        <ul>
-            <li><a href="../materiales/vermateriales.php">VER</a></li>
-            <li><a href="../materiales/formmateriales.php">NUEVO</a></li>
-        </ul>
-      </li>
-      <li><a class="drop" href="#">INCIDENCIAS</a>
-        <ul>
-            <li><a href="../incidencias/verincidencias.php">VER</a></li>
-            <li><a href="../incidencias/formincidencias.php">NUEVA</a></li>
-        </ul>
-      </li>
-      <li><a class="drop" href="">REVISIONES</a>
-        <ul>
-            <li><a href="../revisiones/verrevisiones.php">VER</a></li>
-            <li><a href="../revisiones/formrevisiones.php">NUEVA</a></li>
-        </ul>
-      </li>
-      <li><a class="drop" href="">SOFTWARE</a>
-        <ul>
-            <li><a href="../software/versoftware.php">VER</a></li>
-            <li><a href="../software/formsoftware.php">NUEVO</a></li>
-        </ul>
-      </li>
-      <li><a class="drop" href="">MÁS</a>
-        <ul>
-              <li><a class="drop" href="">MARCAS</a>
+      <?php
+          if($_SESSION['Puesto']=='Encargado')
+            echo " 
+                  <li class='active'><a href='../home.php'>Home</a></li>
+              <li><a class='drop' href='#''>MATERIALES</a>
                 <ul>
-                  <li><a href="../marcas/vermarcas.php">VER</a></li>
-                  <li><a href="../marcas/formmarcas.php">NUEVO</a></li>
+                    <li><a href='../materiales/vermateriales.php'>VER</a></li>
+                    <li><a href='../materiales/formmateriales.php'>NUEVO</a></li>
                 </ul>
               </li>
-              <li><a class="drop" href="">PROVEEDORES</a>
+              <li><a class='drop' href='#''>INCIDENCIAS</a>
                 <ul>
-                  <li><a href="../proveedores/verproveedores.php">VER</a></li>
-                  <li><a href="../proveedores/formproveedores.php">NUEVO</a></li>
+                    <li><a href='../incidencias/verincidencias.php'>VER</a></li>
+                    <li><a href='../incidencias/formincidencias.php'>NUEVA</a></li>
                 </ul>
               </li>
-              <li><a class="drop" href="">UBICACIONES</a>
+              <li><a class='drop' href=''>REVISIONES</a>
                 <ul>
-                  <li><a href="../ubicaciones/verubicaciones.php">VER</a></li>
-                  <li><a href="../ubicaciones/formubicaciones.php">NUEVO</a></li>
+                    <li><a href='../revisiones/verrevisiones.php'>VER</a></li>
+                    <li><a href='../revisiones/formrevisiones.php'>NUEVA</a></li>
                 </ul>
               </li>
-              <li><a class="drop" href="">USUARIOS</a>
-              <ul>
-                <li><a href="../usuarios/verusuarios.php">VER</a></li>
-                <li><a href="../usuarios/formusuarios.php">NUEVO</a></li>
+              <li><a class='drop' href=''>SOFTWARE</a>
+                <ul>
+                    <li><a href='../software/versoftware.php'>VER</a></li>
+                    <li><a href='../software/formsoftware.php'>NUEVO</a></li>
+                </ul>
+              </li>
+              <li><a class='drop' href=''>MÁS</a>
+                <ul>
+                      <li><a class='drop' href=''>MARCAS</a>
+                        <ul>
+                          <li><a href='../marcas/vermarcas.php'>VER</a></li>
+                          <li><a href='../marcas/formmarcas.php'>NUEVO</a></li>
+                        </ul>
+                      </li>
+                      <li><a class='drop' href=''>PROVEEDORES</a>
+                        <ul>
+                          <li><a href='../proveedores/verproveedores.php'>VER</a></li>
+                          <li><a href='../proveedores/formproveedores.php'>NUEVO</a></li>
+                        </ul>
+                      </li>
+                      <li><a class='drop' href=''>UBICACIONES</a>
+                        <ul>
+                          <li><a href='../ubicaciones/verubicaciones.php'>VER</a></li>
+                          <li><a href='../ubicaciones/formubicaciones.php'>NUEVO</a></li>
+                        </ul>
+                      </li>
+                      <li><a class='drop' href=''>USUARIOS</a>
+                      <ul>
+                        <li><a href='../usuarios/verusuarios.php'>VER</a></li>
+                        <li><a href='../usuarios/formusuarios.php'>NUEVO</a></li>
+                ";
+            else
+              if($_SESSION['Puesto']=='Sat')
+                echo " <li class='active'><a href='../homeSat.php'>Home</a></li>
+      <li><a class='drop' href='../materiales/vermateriales.php'>MATERIALES</a>
+        <ul>
+            <li><a href='../materiales/vermateriales.php'>VER</a></li>
+            <li><a href='../materiales/formmateriales.php'>NUEVO</a></li>
+        </ul>
+      </li>
+      <li><a class='drop' href='../incidencias/verincidencias.php'>INCIDENCIAS</a>
+        <ul>
+            <li><a href='../incidencias/verincidencias.php'>VER</a></li>
+        </ul>
+      </li>
+      ";              
+              else
+                if($_SESSION['Puesto']=='Profesor')
+                  echo "
+                    <li class='active'><a href='../homeProf.php'>Home</a></li>
+                          <li><a class='drop' href='../materiales/vermateriales.php'>MATERIALES</a>
+                            <ul>
+                                <li><a href='../materiales/vermateriales.php'>VER</a></li>
+                            </ul>
+                          </li>
+                          <li><a class='drop' href='../incidencias/formincidencias.php'>INCIDENCIAS</a>
+                            <ul>
+                                <li><a href='../incidencias/formincidencias.php'>NUEVA</a></li>
+                            </ul>
+                  ";          
+          ?>
+     
               </ul>
             </li>
         </ul>
@@ -173,8 +219,19 @@ include("../conexion.php");
   <div id="breadcrumb" class="hoc clear"> 
     <!-- ################################################################################################ -->
     <ul>
-      <li><a href="../home.php">Home</a></li>
-      <li><a href="insmateriales">Insertar materiales</a></li>
+      <?php
+          if($_SESSION['Puesto']=='Encargado')
+            echo " <li><a href='../home.php'>Home</a></li>
+                  <li><a href='formmateriales.php'>Insertar materiales</a></li>";
+            else
+              if($_SESSION['Puesto']=='Sat')
+                echo " <li><a href='../homeSat.php'>Home</a></li>
+        <li><a href='formmateriales.php'>Insertar materiales</a></li>";
+
+              else
+                if($_SESSION['Puesto']=='Profesor')
+                  echo "<li><a href='../homeProf.php'>Home</a></li>";          
+          ?>
     
     </ul>
     <!-- ################################################################################################ -->
