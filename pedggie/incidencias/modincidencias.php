@@ -16,7 +16,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <body id="top">
 <?php
 session_start();
-if($_SESSION['Puesto']!='Encargado' and $_SESSION['Puesto']!='Sat')
+if($_SESSION['Puesto']!='Encargado' and $_SESSION['Puesto']!='Profesor')
   header("location:../index.php");
 include("../conexion.php");
 ?>
@@ -188,14 +188,16 @@ include("../conexion.php");
       <?php
           if($_SESSION['Puesto']=='Encargado')
             echo " <li><a href='../home.php'>Home</a></li>
-                  <li><a href='formincidencias.php'>Insertar incidencia</a></li>";
+                  <li><a href='verincidencias.php'>Ver incidencias</a></li>";
             else
               if($_SESSION['Puesto']=='Sat')
                 echo " <li><a href='../homeSat.php'>Home</a></li>";              
               else
                 if($_SESSION['Puesto']=='Profesor')
                   echo "<li><a href='../homeProf.php'>Home</a></li>";          
-          ?>    
+          ?>
+     
+    
     </ul>
     <!-- ################################################################################################ -->
   </div>
@@ -209,49 +211,86 @@ include("../conexion.php");
     <!-- ################################################################################################ -->
     <div class="content"> 
       
-    <h1><FIELDSET>CUADRO DE INCIDENCIAS</FIELDSET></h1>
+    <h1><FIELDSET>MODIFICACIÓN DE INCIDENCIAS</FIELDSET></h1>
       <div class="scrollable">
+<form name="incidencias" id="incidencias" method="post" action="updincidencias.php">
+<table align="center" width="50%" border="1px solid"; border-radius: 5px;>
+<tr>
+    <td>idIncidencia: </td>
+    <td>
+      <select name="idIncidencia" id="idIncidencia" style="width: 300px;">
+          <?php
+      $cla=$_GET['clave'];
+          $sql = "SELECT i.idIncidencia, m.Aparato, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion, u.Usuario FROM materiales as m, incidencias as i, usuarios as u WHERE i.idIncidencia='$cla' AND i.idMaterial=m.idReferencia AND i.idUsuario=u.Dni";
+          $registros = mysqli_query($conexion, $sql);
+          while($linea=mysqli_fetch_array($registros)){
+            echo "<option value='$linea[idIncidencia]'>$linea[idIncidencia]";
+          }
+          ?>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Material: </td>
+    <td>
+      <select name="idMaterial" id="idMaterial" style="width: 300px;">
 
-        
-        <table align="center" width="70%">
-  <tr align="center" bgcolor="black">
-		<th>idIncidencia</th>
-		<th>Aparato</th>
-		<th>Usuario</th>
-    <th>Incidencia</th>
-		<th>FechaIncidencia</th>
-    <th>Solucion</th>
-		<th>FechaSolucion</th>
-    <th>Modificar</th>
-    <th>Borrar</th>
-<!-- aqui falta el dniUsuario que debera rellenarse con el usuario logeado; aun no sabemos hacerlo-->
-	</tr><td></td>
-<?php
-include("./../conexion.php");
-//creamos ula consulta1
-$sql = "SELECT i.idIncidencia, m.Aparato, u.Usuario, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion, u.Apellidos FROM incidencias as i, usuarios as u, materiales as m WHERE i.idUsuario=u.Dni AND i.idMaterial=m.idReferencia;";
-//ejecutamos la consulta
-$registros=mysqli_query($conexion, $sql);
-//leemos el contenido de $registros
-while($linea=mysqli_fetch_array($registros)){
-	echo "<tr>
-          <td>$linea[idIncidencia]</td>
-          <td>$linea[Aparato]</td>
-          <td>$linea[Usuario]&nbsp;$linea[Apellidos]</td>
-          <td>$linea[Incidencia]</td>
-          <td>$linea[FechaIncidencia]</td>
-          <td>$linea[Solucion]</td>
-          <td>$linea[FechaSolucion]</td>
-          <td><a href='modincidencias.php?clave=$linea[idIncidencia]'><img src='../imagenes/ajustes.png' width='25px'></td>
-          <td><a href='borincidencias.php?clave=$linea[idIncidencia]'><img src='../imagenes/basura.png' width='25px'></td>
-        </tr>";
-	echo "<tr><td colspan=9><hr></td></tr>";
-}
-mysqli_close($conexion);
-?>
+      <!--<option value="">-->
+          <?php
+          $sql = "SELECT * FROM materiales";
+          $registros = mysqli_query($conexion, $sql);
+          while($linea=mysqli_fetch_array($registros)){
+            echo "<option value='$linea[idReferencia]'>$linea[Aparato]";
+          }
+          ?>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Fecha de la incidencia: </td>
+    <td>
+      <input type="date" name="FechaIncidencia" id="FechaIncidencia" placeholder="Inserte fecha de la incidencia.">
+    </td>
+  </tr>
+  <tr>
+    <td>Incidencia: </td>
+    <td>
+      <input type="text" name="Incidencia" id="Incidencia" placeholder="Describa la incidencia.">
+    </td>
+  </tr>
+  <tr>
+    <td>Fecha de la solución: </td>
+    <td>
+      <input type="date" name="FechaSolucion" id="FechaSolucion" placeholder="FechaSolucion">
+    </td>
+  </tr>
+  <tr>
+    <td>Solución: </td>
+    <td>
+      <input type="text" name="Solucion" id="Solucion" placeholder="Describa la solución.">
+    </td>
+  </tr>
+  <tr>
+      <td>Usuario: </td>
+      <td>
+          <select name="idUsuario" id="idUsuario" style="width: 300px;">
+             <?php
+              $sql = "SELECT * FROM usuarios";
+             $registros = mysqli_query($conexion, $sql);
+             while($linea=mysqli_fetch_array($registros)){
+               echo "<option value='$linea[Dni]'>$linea[Usuario]";
+             }
+             mysqli_close($conexion);
+             ?>
+          </select>
+      </td>
+    </tr>
+    <tr>
+    <td colspan="7" align="center">
+      <input type="submit" name="Enviar" id="Enviar" placeholder="Enviar">
+    </td>
+  </tr>
 </table>
-
-
       </div>
         
     </div>
