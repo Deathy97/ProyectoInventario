@@ -184,7 +184,7 @@ include("../conexion.php");
                   <td>$linea[Puesto]</td>
                   <td align='center'><a href='borrarusuarios.php?clave=$linea[Dni]'><img width='30' src='../imagenes/basura.png'></a></td>
                 </tr>"; //el ? pasa el parametro 'clave' a la pagina borralumnos
-                echo "<tr><td colspan='6'><hr></td>
+                echo "<tr><td colspan='7'><hr></td>
                 </tr>";
             }
             mysqli_close($conexion);

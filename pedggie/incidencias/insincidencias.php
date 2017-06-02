@@ -8,7 +8,8 @@ $Solucion=$_POST['Solucion'];
 $idUsuario=$_POST['idUsuario'];
 
 //Emails
-$correos = array("rafatorrea@hotmail.com", "rafatorrea@gmail.com","hisrubio51@gmail.com");
+$correos = array("jorgepimpinela8@gmail.com", "rafatorrea@gmail.com","hisrubio51@gmail.com");
+$nombres = array("Rafa","Miguel","");
 
 
 /*$sql1="SELECT Email FROM usuarios WHERE idPuesto=1"
@@ -30,7 +31,7 @@ include("./../conexion.php");
 $sql="INSERT INTO incidencias(idMaterial, FechaIncidencia, Incidencia, FechaSolucion, Solucion, idUsuario) VALUES ('$idMaterial', '$FechaIncidencia', '$Incidencia', '$FechaSolucion', '$Solucion', '$idUsuario')";
 //mail
 
-require '/xampp/htdocs/pedggie/incidencias/PHPMailer/PHPMailerAutoload.php';
+require '/xampp/htdocs/inventario/incidencias/PHPMailer/PHPMailerAutoload.php';
 $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3;                             
@@ -43,11 +44,11 @@ $mail->Password = 'IVSZ1h12';
 $mail->SMTPSecure = 'ssl';                            
 $mail->Port = 465;                                    
 
-$mail->setFrom('inventariosalesianos@gmail.com', 'Don Bosco te vigila');// aqui se pone el nombre que aparece como emisor del correo(en el lugar de Incidencias)
+$mail->setFrom('inventariosalesianos@gmail.com', 'Incidencias');// aqui se pone el nombre que aparece como emisor del correo(en el lugar de Incidencias)
 
 $max = sizeof($correos);
 for ($i = 0; $i < $max; $i++)
-$mail->addAddress($correos[$i], 'RafaMola'); //Direccion del correo que recive el mensaje, creo que se pueden poner varios seguidos ('primero@g.com','segundo@g.com',nombre del receptor)
+$mail->addAddress($correos[$i],$nombres[$i] ); //Direccion del correo que recive el mensaje, creo que se pueden poner varios seguidos ('primero@g.com','segundo@g.com',nombre del receptor)
 
 $mail->Subject = 'Incidencia';//este es el asunto
 $mail->Body    = $Incidencia; //Body del Correo
