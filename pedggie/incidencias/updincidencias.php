@@ -17,5 +17,5 @@ $sql="UPDATE incidencias SET idMaterial='$idMaterial', FechaIncidencia='$FechaIn
 mysqli_query($conexion, $sql) or die("Error en la consulta de insercion $sql");
 mysqli_close($conexion);
 //
-header("location:modincidencias.php");
+header("location:formincidencias.php");
 ?>

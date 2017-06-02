@@ -234,8 +234,15 @@ include("../conexion.php");
     <td>Material: </td>
     <td>
       <select name="idMaterial" id="idMaterial" style="width: 300px;">
+          <?php
+          $cla=$_GET['clave'];
+          $sql = "SELECT i.idIncidencia, m.Aparato, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion, u.Usuario FROM materiales as m, incidencias as i, usuarios as u WHERE i.idIncidencia='$cla' AND i.idMaterial=m.idReferencia AND i.idUsuario=u.Dni";
+          $registros = mysqli_query($conexion, $sql);
+          while($linea=mysqli_fetch_array($registros)){
+            echo "<option value='$linea[idReferencia]'>$linea[Aparato]";
+          }
+          ?>
 
-      <!--<option value="">-->
           <?php
           $sql = "SELECT * FROM materiales";
           $registros = mysqli_query($conexion, $sql);
@@ -249,31 +256,68 @@ include("../conexion.php");
   <tr>
     <td>Fecha de la incidencia: </td>
     <td>
-      <input type="date" name="FechaIncidencia" id="FechaIncidencia" placeholder="Inserte fecha de la incidencia.">
+    <?php
+          $sql = "SELECT i.idIncidencia, m.Aparato, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion, u.Usuario FROM materiales as m, incidencias as i, usuarios as u WHERE i.idIncidencia='$cla' AND i.idMaterial=m.idReferencia AND i.idUsuario=u.Dni";
+          $registros = mysqli_query($conexion, $sql);
+          while($linea=mysqli_fetch_array($registros)){
+            echo "<input type='date' name='FechaIncidencia' id='FechaIncidencia' placeholder='Inserte fecha de la incidencia.' value='$linea[FechaIncidencia]'>";
+          }
+          ?>
     </td>
   </tr>
   <tr>
     <td>Incidencia: </td>
     <td>
-      <input type="text" name="Incidencia" id="Incidencia" placeholder="Describa la incidencia.">
+      <?php
+          $cla=$_GET['clave'];
+          $sql = "SELECT i.idIncidencia, m.Aparato, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion, u.Usuario FROM materiales as m, incidencias as i, usuarios as u WHERE i.idIncidencia='$cla' AND i.idMaterial=m.idReferencia AND i.idUsuario=u.Dni";
+          $registros = mysqli_query($conexion, $sql);
+          while($linea=mysqli_fetch_array($registros)){
+            echo "<input type='text' name='Incidencia' id='Incidencia' placeholder='Describa la incidencia.' value='$linea[Incidencia]'>";
+          }
+          ?>
     </td>
   </tr>
   <tr>
     <td>Fecha de la solución: </td>
     <td>
-      <input type="date" name="FechaSolucion" id="FechaSolucion" placeholder="FechaSolucion">
+    <?php
+          $cla=$_GET['clave'];
+          $sql = "SELECT i.idIncidencia, m.Aparato, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion, u.Usuario FROM materiales as m, incidencias as i, usuarios as u WHERE i.idIncidencia='$cla' AND i.idMaterial=m.idReferencia AND i.idUsuario=u.Dni";
+          $registros = mysqli_query($conexion, $sql);
+          while($linea=mysqli_fetch_array($registros)){
+            echo "<input type='date' name='FechaSolucion' id='FechaSolucion' placeholder='FechaSolucion' value='$linea[FechaSolucion]'>";
+          }
+          ?>
     </td>
   </tr>
   <tr>
     <td>Solución: </td>
     <td>
-      <input type="text" name="Solucion" id="Solucion" placeholder="Describa la solución.">
+    <?php
+          $cla=$_GET['clave'];
+          $sql = "SELECT i.idIncidencia, m.Aparato, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion, u.Usuario FROM materiales as m, incidencias as i, usuarios as u WHERE i.idIncidencia='$cla' AND i.idMaterial=m.idReferencia AND i.idUsuario=u.Dni";
+          $registros = mysqli_query($conexion, $sql);
+          while($linea=mysqli_fetch_array($registros)){
+            echo "<input type='text' name='Solucion' id='Solucion' placeholder='Describa la solución.' value='$linea[Solucion]'>";
+          }
+          ?>
+      
     </td>
   </tr>
   <tr>
       <td>Usuario: </td>
       <td>
           <select name="idUsuario" id="idUsuario" style="width: 300px;">
+
+          <?php
+          $cla=$_GET['clave'];
+          $sql = "SELECT i.idIncidencia, m.Aparato, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion, u.Usuario FROM materiales as m, incidencias as i, usuarios as u WHERE i.idIncidencia='$cla' AND i.idMaterial=m.idReferencia AND i.idUsuario=u.Dni";
+          $registros = mysqli_query($conexion, $sql);
+          while($linea=mysqli_fetch_array($registros)){
+            echo "<option value='$linea[Dni]'>$linea[Usuario]";
+          }
+          ?>
              <?php
               $sql = "SELECT * FROM usuarios";
              $registros = mysqli_query($conexion, $sql);
