@@ -234,14 +234,7 @@ include("../conexion.php");
     <td>Material: </td>
     <td>
       <select name="idMaterial" id="idMaterial" style="width: 300px;">
-          <?php
-          $cla=$_GET['clave'];
-          $sql = "SELECT i.idIncidencia, m.Aparato, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion, u.Usuario FROM materiales as m, incidencias as i, usuarios as u WHERE i.idIncidencia='$cla' AND i.idMaterial=m.idReferencia AND i.idUsuario=u.Dni";
-          $registros = mysqli_query($conexion, $sql);
-          while($linea=mysqli_fetch_array($registros)){
-            echo "<option value='$linea[idReferencia]'>$linea[Aparato]";
-          }
-          ?>
+         
 
           <?php
           $sql = "SELECT * FROM materiales";
@@ -257,6 +250,7 @@ include("../conexion.php");
     <td>Fecha de la incidencia: </td>
     <td>
     <?php
+          $cla=$_GET['clave'];
           $sql = "SELECT i.idIncidencia, m.Aparato, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion, u.Usuario FROM materiales as m, incidencias as i, usuarios as u WHERE i.idIncidencia='$cla' AND i.idMaterial=m.idReferencia AND i.idUsuario=u.Dni";
           $registros = mysqli_query($conexion, $sql);
           while($linea=mysqli_fetch_array($registros)){
@@ -310,14 +304,6 @@ include("../conexion.php");
       <td>
           <select name="idUsuario" id="idUsuario" style="width: 300px;">
 
-          <?php
-          $cla=$_GET['clave'];
-          $sql = "SELECT i.idIncidencia, m.Aparato, i.FechaIncidencia, i.Incidencia, i.FechaSolucion, i.Solucion, u.Usuario FROM materiales as m, incidencias as i, usuarios as u WHERE i.idIncidencia='$cla' AND i.idMaterial=m.idReferencia AND i.idUsuario=u.Dni";
-          $registros = mysqli_query($conexion, $sql);
-          while($linea=mysqli_fetch_array($registros)){
-            echo "<option value='$linea[Dni]'>$linea[Usuario]";
-          }
-          ?>
              <?php
               $sql = "SELECT * FROM usuarios";
              $registros = mysqli_query($conexion, $sql);
